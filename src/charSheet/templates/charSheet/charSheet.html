@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    charsheet
+    <ul>
+        {% for class in classes %}
+        <li>{{class}}</li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>
