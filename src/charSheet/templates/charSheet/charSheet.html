@@ -10,9 +10,20 @@
 
 <body>
     <ul>
-        {% for class in classes %}
+
         <li>{{class}}</li>
-        {% endfor %}
+
+        <h2>Submit Button</h2>
+
+        <p>The <strong>input type="submit"</strong> defines a button for submitting form data to a form-handler:</p>
+
+        <form action="" method="post">
+            {{form}}
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>If you click "Submit", the form-data will be sent to a page called "/action_page.php".</p>
+
     </ul>
 </body>
 
