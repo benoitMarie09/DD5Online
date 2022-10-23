@@ -21,6 +21,7 @@ from django.db import models
 class Character(models.Model):
     name = models.CharField(null=True, max_length=100)
     classe = models.CharField(null=True, max_length=100)
+    proficiencies = models.CharField(null=True, max_length=100)
 
     def __str__(self):
         return '{}-{}-{}'.format(self.id, self.name, self.classe)
