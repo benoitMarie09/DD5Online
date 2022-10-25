@@ -1,21 +1,21 @@
 from django import forms
 import requests
-from .models import Character
+from .models import PJ
 
 
 class CreateForm(forms.ModelForm):
 
     class Meta:
-        model = Character
-        fields = ['name', ]
+        model = PJ
+        fields = ['nom', ]
 
-
+"""
 class ClassForm(forms.ModelForm):
     classe = forms.ChoiceField(widget=forms.RadioSelect,
                                choices=())
 
     class Meta:
-        model = Character
+        model = PJ
         fields = ('classe',)
 
     def __init__(self, *args, **kwargs):
@@ -31,14 +31,15 @@ class ClassForm(forms.ModelForm):
             choices.append((DDclass['index'], DDclass['index'].capitalize()))
         print(choices)
         return choices
+"""
 
-
+"""
 class ClassProfForm(forms.ModelForm):
     proficiencies = forms.ChoiceField(widget=forms.Select,
                                       choices=())
 
     class Meta:
-        model = Character
+        model = PJ
         fields = ('proficiencies',)
 
     def __init__(self, *args, character, **kwargs):
@@ -58,4 +59,4 @@ class ClassProfForm(forms.ModelForm):
                 prof = option['item']['index'].split('-')[-1]
                 choices.append((prof, prof.capitalize()))
         print(choices)
-        return choices
+        return choices"""
