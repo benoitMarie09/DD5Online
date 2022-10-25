@@ -1,51 +1,40 @@
 from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import render
-from .forms import CreateForm
+from .forms import CreateForm, ClasseForm, CompetencesForm
 from .models import PJ
+from django.views.generic import DetailView
+from django.views.generic.edit import CreateView, UpdateView
 # Create your views here.
 
 
-def create_character(request):
-    if request.method == 'POST':
-        form = CreateForm(request.POST)
-        if form.is_valid():
-            character = form.save()
-            return HttpResponseRedirect('/{}/classe/'.format(character.id))
-    else:
-        form = CreateForm()
-    return render(request, 'charSheet/createForm.html', {'form': form})
+class CreatePJView(CreateView):
+    model = PJ
+    form_class = CreateForm
+    template_name = 'charSheet/pj_form.html'
 
-"""
-def classe(request, id):
-    character = PJ.objects.get(id=id)
-    if request.method == 'POST':
-        form = ClassForm(request.POST, instance=character)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/{}/proficiencies/'.format(id))
-    else:
-        form = ClassForm(instance=character)
-    return render(request, 'charSheet/classeForm.html', {'form': form})
-"""
-
-"""
-def proficiencies(request, id):
-    character = PJ.objects.get(id=id)
-    if request.method == 'POST':
-        form = ClassProfForm(
-            request.POST, character=character, instance=character)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/{}/thanks/'.format(id))
-    else:
-        form = ClassProfForm(character=character, instance=character)
-    return render(request, 'charSheet/profForm.html', {'form': form})
-"""
+    def get_success_url(self):
+        return reverse('classe', kwargs={'pk': self.object.pk})
 
 
-def thanks(request, id):
-    character = PJ.objects.get(id=id)
-    context = dict()
-    context['name'] = character.name
-    context['classe'] = character.classe
-    return render(request, 'charSheet/thanks.html', context)
+class UpdateClasseView(UpdateView):
+    model = PJ
+    form_class = ClasseForm
+    template_name = 'charSheet/classe_form.html'
+
+    def get_success_url(self):
+        return reverse('competences', args=(self.object.id,))
+
+
+class UpdateCcompetencesView(UpdateView):
+    model = PJ
+    form_class = CompetencesForm
+    template_name = 'charSheet/comp_form.html'
+
+    def get_success_url(self):
+        return reverse('detail', args=(self.object.id,))
+
+
+class PJDetails(DetailView):
+    model = PJ
+

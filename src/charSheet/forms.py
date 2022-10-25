@@ -1,6 +1,9 @@
 from django import forms
+from django.db import models
+from django.contrib import admin
+from django.forms import RadioSelect, CheckboxSelectMultiple
 import requests
-from .models import PJ
+from .models import PJ, Classe
 
 
 class CreateForm(forms.ModelForm):
@@ -9,54 +12,43 @@ class CreateForm(forms.ModelForm):
         model = PJ
         fields = ['nom', ]
 
-"""
-class ClassForm(forms.ModelForm):
-    classe = forms.ChoiceField(widget=forms.RadioSelect,
-                               choices=())
+
+class ClasseForm(forms.ModelForm):
+    class Meta:
+        model = PJ
+        fields = ['classe', ]
+        widgets = {'classe': RadioSelect}
+
+
+class CompetencesForm(forms.ModelForm):
+    maitrise_competences = forms.ModelMultipleChoiceField(queryset=None,
+                                                          widget=CheckboxSelectMultiple)
 
     class Meta:
         model = PJ
-        fields = ('classe',)
+        fields = ['maitrise_competences', ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['classe'].choices = self.get_classes_choices()
+        self.classe = self.instance.classe
+        self.nb_competences = self.classe.nb_competences
+        self.fields['maitrise_competences'].queryset = self.classe.choix_competences.all()
 
-    def get_classes_choices(self):
-        r = requests.get(
-            'https://www.dnd5eapi.co/api/classes')
-        classes_data = r.json()
-        choices = []
-        for DDclass in classes_data['results']:
-            choices.append((DDclass['index'], DDclass['index'].capitalize()))
-        print(choices)
-        return choices
-"""
+    def clean_maitrise_competences(self):
+        value = self.cleaned_data['maitrise_competences']
+        if len(value) != self.nb_competences:
+            raise forms.ValidationError(
+                f"Vous devez sélectionner {self.nb_competences} compétences.")
+        return value
 
-"""
-class ClassProfForm(forms.ModelForm):
-    proficiencies = forms.ChoiceField(widget=forms.Select,
-                                      choices=())
 
-    class Meta:
-        model = PJ
-        fields = ('proficiencies',)
+class ClasseAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+    }
 
-    def __init__(self, *args, character, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.character = character
-        self.classe = character.classe
-        self.fields['proficiencies'].choices = self.get_prof_choices(
-            self.classe)
 
-    def get_prof_choices(self, classe):
-        r = requests.get(
-            'https://www.dnd5eapi.co/api/classes/'+classe)
-        classe_data = r.json()
-        choices = []
-        for elem in classe_data['proficiency_choices']:
-            for option in elem['from']['options']:
-                prof = option['item']['index'].split('-')[-1]
-                choices.append((prof, prof.capitalize()))
-        print(choices)
-        return choices"""
+class PJAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+    }
