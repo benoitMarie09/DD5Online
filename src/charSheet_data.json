@@ -1,5 +1,1056 @@
 [
     {
+        "model": "charSheet.historique",
+        "pk": "acolyte",
+        "fields": {
+            "desc": "Vous avez passé votre vie au service du temple d'un dieu spécifique ou d'un panthéon de dieux. Vous agissez comme intermédiaire entre les royaumes des cieux et le monde des mortels, exécutant des rites sacrés et offrant des sacrifices pour conduire les fidèles face aux divins. Vous n'êtes pas nécessairement un clerc, car exécuter des rites sacrés religieux n'est pas la même chose que de canaliser la puissance divine.\r\n\r\nChoisissez un dieu, un panthéon de dieux ou un être quasi-divin, et travaillez avec votre MD pour préciser la nature de votre labeur religieux. Étiez-vous un fonctionnaire de bas rang dans un temple, élevé dès l'enfance pour aider les clercs à réaliser leurs rites sacrés ? Ou étiez-vous un religieux qui a soudainement reçu un appel pour servir son dieu d'une manière différente ? Peut-être êtes-vous le chef d'un petit culte en dehors de la structure établie d'un temple, ou membre d'un groupe occulte qui a servi un maître diabolique que vous reniez à présent.",
+            "po": 15,
+            "competences": [
+                "intuition",
+                "religion"
+            ],
+            "outils": [
+                "aucun"
+            ],
+            "langue": [
+                "2 au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "artisan de guilde",
+        "fields": {
+            "desc": "Vous êtes le membre d'une guilde d'artisans, compétent dans un domaine particulier et en relation étroite avec d'autres artisans. Vous êtes au fait du monde des marchés, libéré des contraintes d'un ordre social féodal grâce à votre talent et à votre richesse. Vous avez appris votre savoir-faire en tant qu'apprenti auprès d'un maître artisan, sous l'égide de votre guilde, jusqu'à ce que vous deveniez à votre tour un maître dans votre branche.",
+            "po": 15,
+            "competences": [
+                "intuition",
+                "persuasion"
+            ],
+            "outils": [
+                "un type d'outil d'artisan"
+            ],
+            "langue": [
+                "une au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "artiste",
+        "fields": {
+            "desc": "Vous vous épanouissez lorsque vous vous trouvez devant un public. Vous savez comment l'hypnotiser, comment l'amuser, comment l'inspirer. Vos poèmes font fondre les cœurs de ceux qui vous écoutent, réveillant les colères et les joies, répandant le rire ou la tristesse. Votre musique envahit leur esprit et s'empare de leurs douleurs. Vos pas de danse hypnotisent, votre humour pique au vif. Quelles que soient les techniques que vous utilisiez, l'art est toute votre vie.",
+            "po": 15,
+            "competences": [
+                "acrobaties",
+                "représentation"
+            ],
+            "outils": [
+                "instrument de musique",
+                "kit de déguisement"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "charlatan",
+        "fields": {
+            "desc": "Vous avez toujours eu un bon feeling avec les gens. Vous savez comment les accrocher, vous pouvez percevoir leurs plus profonds désirs après quelques minutes de conversations, et avec quelques questions précises vous pouvez lire en eux comme dans un livre ouvert. C'est un talent très utile, et vous savez exactement comment l'utiliser à votre avantage.\r\n\r\nVous savez ce que les gens veulent et vous le leur donnez, ou plutôt vous leur promettez de le leur donner. Le sens commun voudrait qu'une personne fuit une offre qui semble trop belle pour être vraie, mais le sens commun semble toujours être absent lorsque vous êtes dans les parages. Cette bouteille d'un liquide rosâtre va soigner à coups sûrs cette vilaine éruption cutanée, cet onguent (rien de plus qu'un peu de graisse saupoudrée de poussière d'argent) peut rendre jeunesse et vigueur, et il y a un pont en ville qui vient tout juste d'être mis en vente. Ces racontars semblent invraisemblables, mais vous parvenez toujours à leur faire prendre l'apparence de très bonnes affaires tout à fait plausibles.",
+            "po": 15,
+            "competences": [
+                "escamotage",
+                "tromperie"
+            ],
+            "outils": [
+                "kit de contrefaçon",
+                "kit de déguisement"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "criminel",
+        "fields": {
+            "desc": "Vous êtes un criminel expérimenté avec un long passif d'infractions à la loi. Vous avez passé beaucoup de temps aux côtés d'autres criminels et avez encore des contacts au sein de la pègre. Vous êtes bien plus familier que la plupart des autres personnes avec le monde du meurtre, du vol et de la violence qui règne au sein de la civilisation, et vous avez survécu jusque là en bafouant les règles et les lois de la société.",
+            "po": 15,
+            "competences": [
+                "discrétion",
+                "tromperie"
+            ],
+            "outils": [
+                "outils de voleur",
+                "type de jeu"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "enfant des rues",
+        "fields": {
+            "desc": "Vous avez grandi seul dans la rue, orphelin et pauvre. Vous n'aviez personne pour vous surveiller ni pour subvenir à vos besoins, vous avez donc tout appris par vous-même. Vous vous êtes battu férocement pour obtenir votre nourriture et gardiez constamment un œil sur d'autres âmes abandonnées comme vous qui n'espéraient qu'un bon moment pour vous voler. Vous dormiez sur des toits ou dans des rues, exposé aux intempéries, et vous avez vaincu la maladie à de nombreuses reprises, sans aucune médecine ni aucun endroit pour vous récupérer. Vous avez survécu en dépit de tous les pronostiques, ce qui vous a rendu rusé, fort ou rapide, voire un peu tout cela à la fois.\r\n\r\nVous commencez votre carrière d'aventurier avec assez d'argent pour vivre modestement mais en sécurité pour au moins dix jours. Comment avec vous obtenu cet argent ? Qu'est-ce qui vous a permis de vous libérer de votre affreuse condition de vie et de partir pour une vie meilleure ?",
+            "po": 10,
+            "competences": [
+                "discrétion",
+                "escamotage"
+            ],
+            "outils": [
+                "kit de déguisement",
+                "outils de voleur"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "ermite",
+        "fields": {
+            "desc": "Vous avez vécu reclus, soit dans une communauté protégée, comme un monastère, ou entièrement seul, lors d'un épisode formateur de votre vie. Durant cette période loin de la clameur de la société, vous avez trouvé le calme, la solitude et peut-être même certaines réponses que vous cherchiez.",
+            "po": 5,
+            "competences": [
+                "médecine",
+                "religion"
+            ],
+            "outils": [
+                "aucun"
+            ],
+            "langue": [
+                "une au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "héros du peuple",
+        "fields": {
+            "desc": "Vous venez d'un milieu social humble, mais êtes destiné à beaucoup plus. Déjà, les gens de votre village natal vous considèrent comme leur champion, et votre destin vous appelle à vous dresser face aux tyrans et aux monstres qui menacent les gens du commun un peu partout.",
+            "po": 10,
+            "competences": [
+                "dressage",
+                "survie"
+            ],
+            "outils": [
+                "un type d'outil d'artisan"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "marin",
+        "fields": {
+            "desc": "Vous avez navigué sur un navire pendant des années. Durant cette période, vous avez affronté de nombreuses tempêtes, de nombreux monstres des profondeurs, et tous ceux qui voulaient envoyer par le fond votre embarcation. Votre premier amour est cette ligne inatteignable, l'horizon, mais le temps est venu pour vous de vous frotter à autre chose.\r\n\r\nDiscutez de la nature de votre passé sur les flots avec votre MD. Étiez vous sur un navire marchand, un navire de la marine, un navire d'exploration, ou sur un navire pirate ? À quel point votre navire était-il réputé (ou infâme) ? A-t-il vogué sur de longues distances ? Navigue-t-il encore ou a-t-il disparu, présumé perdu avec tout son équipage ? Quelle était votre responsabilité sur le navire : quartier maître, capitaine, marin, maître coq ou autre ? Qui était le capitaine et qui était le second ? Avez vous quitté votre navire en bon terme avec l'équipage, ou l'avez vous fui ?",
+            "po": 10,
+            "competences": [
+                "athlétisme",
+                "perception"
+            ],
+            "outils": [
+                "outils de navigateur",
+                "véhicules (aquatiques)"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "noble",
+        "fields": {
+            "desc": "Vous savez ce qu'est la richesse, le pouvoir et les privilèges. Vous portez un titre de noblesse, et votre famille possède des terres, perçoit des impôts, et exerce une influence politique significative. Vous pourriez être un aristocrate choyé qui ne connaît pas le travail et l'inconfort, un ancien marchand qui vient d'être élevé au rang de noble, ou une fripouille déshéritée avec un attrait pour les titres disproportionnés. Ou vous pourriez être un honnête propriétaire terrien qui travaille dur et qui se soucie profondément des gens qui vivent et travaillent sur ses terres, tout à fait conscient de votre responsabilité envers eux. Travaillez avec votre MD pour définir un titre approprié et quelle autorité ce titre vous donne. Un titre de noblesse n'est pas une chose personnelle, il concerne une famille entière, et, quel que soit le titre que vous détenez, vous le transmettrez à vos enfants. Donc non seulement vous devez déterminer votre titre de noblesse, mais vous devez également travailler avec votre MD pour décrire votre famille et l'influence qu'elle a sur vous.",
+            "po": 25,
+            "competences": [
+                "histoire",
+                "persuasion"
+            ],
+            "outils": [
+                "type de jeu"
+            ],
+            "langue": [
+                "une au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "sage",
+        "fields": {
+            "desc": "Vous avez passé des années à étudier le multivers. Vous avez écumé les manuscrits, dévoré des parchemins et écouté les plus grands experts sur les sujets qui vous intéressent. Vos efforts ont fait de vous un maître dans vos domaines d'études.",
+            "po": 10,
+            "competences": [
+                "arcanes",
+                "histoire"
+            ],
+            "outils": [
+                "aucun"
+            ],
+            "langue": [
+                "2 au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "sauvageon",
+        "fields": {
+            "desc": "Vous avez grandi dans les étendues sauvages, loin de toute civilisation et des conforts qu'offrent les villes et la technologie. Vous avez été témoin de la migration de troupeaux plus larges que des forêts, vous avez survécu à des climats plus extrêmes qu'aucun citadin ne pourrait l'imaginer, et vous avez apprécié la solitude d'être la seule créature pensante à des kilomètres à la ronde. La nature est dans votre sang, que vous ayez été nomade, explorateur, reclus, chasseur ou même pillard. Même dans un endroit dont vous ne connaissez pas les caractéristiques du terrain, vous savez de quelle manière appréhender une étendue sauvage.",
+            "po": 10,
+            "competences": [
+                "athlétisme",
+                "survie"
+            ],
+            "outils": [
+                "instrument de musique"
+            ],
+            "langue": [
+                "une au choix"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.historique",
+        "pk": "soldat",
+        "fields": {
+            "desc": "La guerre a été votre vie aussi loin que remontent vos souvenirs. Vous avez été formé dès votre jeunesse, avez étudié l'utilisation des armes et des armures, appris des techniques de base de survie, y compris la façon de rester en vie sur un champ de bataille. Vous pourriez avoir fait partie de l'armée d'un royaume ou d'une compagnie de mercenaires, ou peut-être avoir été membre d'une milice locale qui s'est fait connaître au cours d'une guerre récente. Lorsque vous choisissez cet historique, travaillez avec votre MD pour déterminer de quelle organisation militaire vous faisiez partie, jusqu'où avez-vous progressé dans ses grades, et quelles expériences avez-vous vécues au cours de votre carrière militaire. Était-ce une armée régulière, la garde d'une ville ou une milice de village ? Ou était-ce l'armée privée d'un noble ou d'un marchand, ou bien une compagnie de mercenaires ?",
+            "po": 10,
+            "competences": [
+                "athlétisme",
+                "intimidation"
+            ],
+            "outils": [
+                "type de jeu"
+            ],
+            "langue": [
+                "aucune"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 1,
+        "fields": {
+            "historique": "acolyte",
+            "equipement": "symbole sacré d'acolyte",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 2,
+        "fields": {
+            "historique": "acolyte",
+            "equipement": "livre de prières",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 3,
+        "fields": {
+            "historique": "acolyte",
+            "equipement": "bâtons d'encens",
+            "quantite": 5
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 4,
+        "fields": {
+            "historique": "acolyte",
+            "equipement": "habits de cérémonie",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 5,
+        "fields": {
+            "historique": "acolyte",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 6,
+        "fields": {
+            "historique": "artisan de guilde",
+            "equipement": "jeu d'outil d'artisan",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 7,
+        "fields": {
+            "historique": "artisan de guilde",
+            "equipement": "lettre de recommandation de votre guilde",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 8,
+        "fields": {
+            "historique": "artisan de guilde",
+            "equipement": "vêtements de voyage",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 9,
+        "fields": {
+            "historique": "artiste",
+            "equipement": "instrument de musique",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 10,
+        "fields": {
+            "historique": "artiste",
+            "equipement": "cadeau d'un admirateur",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 11,
+        "fields": {
+            "historique": "artiste",
+            "equipement": "costume",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 12,
+        "fields": {
+            "historique": "charlatan",
+            "equipement": "vêtements fins",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 13,
+        "fields": {
+            "historique": "charlatan",
+            "equipement": "kit de déguisement",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 14,
+        "fields": {
+            "historique": "charlatan",
+            "equipement": "outils d'escroquerie",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 15,
+        "fields": {
+            "historique": "criminel",
+            "equipement": "pied-de-biche",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 16,
+        "fields": {
+            "historique": "criminel",
+            "equipement": "vêtements communs sombres avec une capuche",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 17,
+        "fields": {
+            "historique": "enfant des rues",
+            "equipement": "petit couteau",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 18,
+        "fields": {
+            "historique": "enfant des rues",
+            "equipement": "carte de la ville",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 19,
+        "fields": {
+            "historique": "enfant des rues",
+            "equipement": "souris domestiquée",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 20,
+        "fields": {
+            "historique": "enfant des rues",
+            "equipement": "souvenir de vos parents",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 21,
+        "fields": {
+            "historique": "enfant des rues",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 22,
+        "fields": {
+            "historique": "ermite",
+            "equipement": "étui à parchemin",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 23,
+        "fields": {
+            "historique": "ermite",
+            "equipement": "une couverture pour l'hiver",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 24,
+        "fields": {
+            "historique": "ermite",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 25,
+        "fields": {
+            "historique": "ermite",
+            "equipement": "kit d'herboriste",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 26,
+        "fields": {
+            "historique": "héros du peuple",
+            "equipement": "jeu d'outil d'artisan",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 27,
+        "fields": {
+            "historique": "héros du peuple",
+            "equipement": "pelle",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 28,
+        "fields": {
+            "historique": "héros du peuple",
+            "equipement": "pot en fer",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 29,
+        "fields": {
+            "historique": "héros du peuple",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 30,
+        "fields": {
+            "historique": "marin",
+            "equipement": "cabillot d'amarrage (gourdin)",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 31,
+        "fields": {
+            "historique": "marin",
+            "equipement": "corde en soie (15 m)",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 32,
+        "fields": {
+            "historique": "marin",
+            "equipement": "porte bonheur",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 33,
+        "fields": {
+            "historique": "marin",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 34,
+        "fields": {
+            "historique": "noble",
+            "equipement": "vêtements fins",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 35,
+        "fields": {
+            "historique": "noble",
+            "equipement": "chevalière",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 36,
+        "fields": {
+            "historique": "noble",
+            "equipement": "lettre de noblesse",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 37,
+        "fields": {
+            "historique": "sage",
+            "equipement": "bouteille d'encre noire",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 38,
+        "fields": {
+            "historique": "sage",
+            "equipement": "plume",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 39,
+        "fields": {
+            "historique": "sage",
+            "equipement": "petit couteau",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 40,
+        "fields": {
+            "historique": "sage",
+            "equipement": "lettre",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 41,
+        "fields": {
+            "historique": "sage",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 42,
+        "fields": {
+            "historique": "sauvageon",
+            "equipement": "bâton",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 43,
+        "fields": {
+            "historique": "sauvageon",
+            "equipement": "piège à mâchoires",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 44,
+        "fields": {
+            "historique": "sauvageon",
+            "equipement": "trophée d'animal que vous avez tué",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 45,
+        "fields": {
+            "historique": "sauvageon",
+            "equipement": "vêtements de voyage",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 46,
+        "fields": {
+            "historique": "soldat",
+            "equipement": "insigne de grade",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 47,
+        "fields": {
+            "historique": "soldat",
+            "equipement": "trophée pris sur un ennemi mort",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 48,
+        "fields": {
+            "historique": "soldat",
+            "equipement": "jeu",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.quantiteequipement",
+        "pk": 49,
+        "fields": {
+            "historique": "soldat",
+            "equipement": "vêtements communs",
+            "quantite": 1
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "bouteille d'encre noire",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "bâton",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "bâtons d'encens",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "cabillot d'amarrage (gourdin)",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "cadeau d'un admirateur",
+        "fields": {
+            "desc": "(une lettre d'amour, une mèche de cheveux, une babiole)"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "carte de la ville",
+        "fields": {
+            "desc": "ville dans laquelle vous avez grandi"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "chevalière",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "corde en soie (15 m)",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "costume",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "habits de cérémonie",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "insigne de grade",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "instrument de musique",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "jeu",
+        "fields": {
+            "desc": "dés en os ou un jeu de cartes"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "jeu d'outil d'artisan",
+        "fields": {
+            "desc": "(de votre choix)"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "kit d'herboriste",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "kit de déguisement",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "lettre",
+        "fields": {
+            "desc": "d'un collègue mort posant une question à laquelle vous n'avez pas encore été en mesure de répondre"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "lettre de noblesse",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "lettre de recommandation de votre guilde",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "livre de prières",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "outils d'escroquerie",
+        "fields": {
+            "desc": "de votre choix (10 bouteilles bouchonnées remplies d'un liquide coloré, dés truqués, cartes marquées, fausse chevalière de duc, ...)"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "pelle",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "petit couteau",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "pied-de-biche",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "piège à mâchoires",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "plume",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "porte bonheur",
+        "fields": {
+            "desc": "comme une patte de lapin ou une petite pierre avec un trou en son centre (vous pouvez sinon tirer aléatoirement une babiole)"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "pot en fer",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "souris domestiquée",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "souvenir de vos parents",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "symbole sacré d'acolyte",
+        "fields": {
+            "desc": "cadeau reçu lorsque vous êtes entré en sacerdoce"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "trophée d'animal que vous avez tué",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "trophée pris sur un ennemi mort",
+        "fields": {
+            "desc": "(une dague, une lame brisée, un morceau de bannière)"
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "une couverture pour l'hiver",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "vêtements communs",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "vêtements communs sombres avec une capuche",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "vêtements de voyage",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "vêtements fins",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.equipement",
+        "pk": "étui à parchemin",
+        "fields": {
+            "desc": "remplis de notes sur vos études ou vos prières"
+        }
+    },
+    {
+        "model": "charSheet.langue",
+        "pk": "2 au choix",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.langue",
+        "pk": "aucune",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.langue",
+        "pk": "une au choix",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "aucun",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "instrument de musique",
+        "fields": {
+            "desc": "(de votre choix)"
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit d'herboriste",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit de contrefaçon",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit de déguisement",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "outils de navigateur",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "outils de voleur",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "type de jeu",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "un type d'outil d'artisan",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "véhicules (aquatiques)",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "véhicules (terrestre)",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
         "model": "charSheet.racecapacite",
         "pk": "Agilité halfeline",
         "fields": {
@@ -824,6 +1875,14 @@
         "fields": {
             "desc": "Un jet d'Intelligence (Arcanes) évalue votre aptitude à vous rappeler des choses à propos de sorts, d'objets magiques, de symboles occultes, de traditions magiques, de plans d'existence ou des habitants de ces plans.",
             "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "athlétisme",
+        "fields": {
+            "desc": "Un jet de Force (Athlétisme) couvre les situations difficiles que vous rencontrez en grimpant, en sautant ou nageant.",
+            "caracteristique": "for"
         }
     },
     {

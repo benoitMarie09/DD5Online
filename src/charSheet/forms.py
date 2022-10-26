@@ -49,6 +49,14 @@ class CompetencesForm(forms.ModelForm):
         return value
 
 
+class CaractForm(forms.ModelForm):
+
+    class Meta:
+        model = PJ
+        fields = ['force', 'constitution', 'dexterite',
+                  'intelligence', 'sagesse', 'charisme', ]
+
+
 class ClasseAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},

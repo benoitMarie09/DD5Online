@@ -1,8 +1,53 @@
 from django.db import models
 from django.contrib import admin
+from django.forms import CheckboxSelectMultiple
 
 
 # Create your models here.
+
+class Historique(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True)
+    competences = models.ManyToManyField('Competence')
+    outils = models.ManyToManyField('Outil')
+    langue = models.ManyToManyField('Langue')
+    po = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
+
+class QuantiteEquipement(models.Model):
+    historique = models.ForeignKey(
+        'Historique', related_name='quantite_equipement', on_delete=models.SET_NULL, null=True)
+    equipement = models.ForeignKey(
+        'Equipement', related_name='quantite_equipement', on_delete=models.SET_NULL, null=True)
+    quantite = models.IntegerField(default=1)
+
+
+class Equipement(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
+
+class Langue(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
+
+class Outil(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
 
 class RaceCapacite(models.Model):
     id = models.CharField(primary_key=True, max_length=50)
@@ -84,15 +129,84 @@ class PJ(models.Model):
         'Classe', null=True, related_name='PJs', on_delete=models.CASCADE)
     maitrise_competences = models.ManyToManyField('Competence')
 
+    force = models.IntegerField(null=True, blank=True)
+    constitution = models.IntegerField(null=True, blank=True)
+    dexterite = models.IntegerField(null=True, blank=True)
+    intelligence = models.IntegerField(null=True, blank=True)
+    sagesse = models.IntegerField(null=True, blank=True)
+    charisme = models.IntegerField(null=True, blank=True)
+
     def __str__(self):
         return '{}-{}-{}'.format(self.id, self.nom, self.classe)
 
+    def save(self, *args, **kwargs):
+        if self.force is None:
+            if self.race:
+                print(self.race)
+                try:
+                    self.force = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='for').valeur
+                except:
+                    self.force = 10
+        if self.constitution is None:
+            if self.race:
+                try:
+                    self.constitution = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='con').valeur
+                except:
+                    self.constitution = 10
+        if self.dexterite is None:
+            if self.race:
+                try:
+                    self.dexterite = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='dex').valeur
+                except:
+                    self.dexterite = 10
+        if self.intelligence is None:
+            if self.race:
+                try:
+                    self.intelligence = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='int').valeur
+                except:
+                    self.intelligence = 10
+        if self.sagesse is None:
+            if self.race:
+                try:
+                    self.sagesse = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='sag').valeur
+                except:
+                    self.sagesse = 10
+        if self.charisme is None:
+            if self.race:
+                try:
+                    self.charisme = 10 + BonusCaracteristique.objects.get(
+                        race=self.race, caracteristique='cha').valeur
+                except:
+                    self.charisme = 10
+        super(PJ, self).save(*args, **kwargs)
 
 # Gestion des formulaire admin pour le m2m
+
+
+class QuantiteEquipement_inline(admin.TabularInline):
+    model = QuantiteEquipement
+    extra = 1
+
 
 class BonusCaracteristique_inline(admin.TabularInline):
     model = BonusCaracteristique
     extra = 1
+
+
+class HistoriqueAdmin(admin.ModelAdmin):
+    inlines = (QuantiteEquipement_inline,)
+    formfield_overrides = {
+        models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+    }
+
+
+class EquipementAdmin(admin.ModelAdmin):
+    inlines = (QuantiteEquipement_inline,)
 
 
 class RaceAdmin(admin.ModelAdmin):

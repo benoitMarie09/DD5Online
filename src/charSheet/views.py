@@ -1,8 +1,8 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
-from .forms import CreateForm, ClasseForm, CompetencesForm, RaceForm
-from .models import PJ
+from .forms import CaractForm, CreateForm, ClasseForm, CompetencesForm, RaceForm
+from .models import PJ, BonusCaracteristique
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView
 # Create your views here.
@@ -15,6 +15,7 @@ class CreatePJView(CreateView):
 
     def get_success_url(self):
         return reverse('race', kwargs={'pk': self.object.pk})
+
 
 class UpdateRaceView(UpdateView):
     model = PJ
@@ -34,10 +35,19 @@ class UpdateClasseView(UpdateView):
         return reverse('competences', args=(self.object.id,))
 
 
-class UpdateCcompetencesView(UpdateView):
+class UpdateCompetencesView(UpdateView):
     model = PJ
     form_class = CompetencesForm
     template_name = 'charSheet/comp_form.html'
+
+    def get_success_url(self):
+        return reverse('caract', args=(self.object.id,))
+
+
+class UpdateCaractView(UpdateView):
+    model = PJ
+    form_class = CaractForm
+    template_name = 'charSheet/caract_form.html'
 
     def get_success_url(self):
         return reverse('detail', args=(self.object.id,))
@@ -45,4 +55,3 @@ class UpdateCcompetencesView(UpdateView):
 
 class PJDetails(DetailView):
     model = PJ
-
