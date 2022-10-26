@@ -78,6 +78,8 @@ class Classe(models.Model):
 
 class PJ(models.Model):
     nom = models.CharField(null=True, max_length=100)
+    race = models.ForeignKey(
+        'Race', null=True, related_name='PJs', on_delete=models.CASCADE)
     classe = models.ForeignKey(
         'Classe', null=True, related_name='PJs', on_delete=models.CASCADE)
     maitrise_competences = models.ManyToManyField('Competence')

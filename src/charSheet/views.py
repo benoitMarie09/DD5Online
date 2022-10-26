@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
-from .forms import CreateForm, ClasseForm, CompetencesForm
+from .forms import CreateForm, ClasseForm, CompetencesForm, RaceForm
 from .models import PJ
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView
@@ -14,7 +14,15 @@ class CreatePJView(CreateView):
     template_name = 'charSheet/pj_form.html'
 
     def get_success_url(self):
-        return reverse('classe', kwargs={'pk': self.object.pk})
+        return reverse('race', kwargs={'pk': self.object.pk})
+
+class UpdateRaceView(UpdateView):
+    model = PJ
+    form_class = RaceForm
+    template_name = 'charSheet/race_form.html'
+
+    def get_success_url(self):
+        return reverse('classe', args=(self.object.id,))
 
 
 class UpdateClasseView(UpdateView):

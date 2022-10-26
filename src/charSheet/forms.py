@@ -13,6 +13,13 @@ class CreateForm(forms.ModelForm):
         fields = ['nom', ]
 
 
+class RaceForm(forms.ModelForm):
+    class Meta:
+        model = PJ
+        fields = ['race', ]
+        widgets = {'race': RadioSelect}
+
+
 class ClasseForm(forms.ModelForm):
     class Meta:
         model = PJ
