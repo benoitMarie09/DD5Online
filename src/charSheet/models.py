@@ -8,7 +8,8 @@ from django.forms import CheckboxSelectMultiple
 class Historique(models.Model):
     id = models.CharField(primary_key=True, max_length=50)
     desc = models.TextField(null=True)
-    competences = models.ManyToManyField('Competence')
+    competences = models.ManyToManyField(
+        'Competence', related_name='historiques')
     outils = models.ManyToManyField('Outil')
     langue = models.ManyToManyField('Langue')
     po = models.IntegerField(null=True, blank=True)
@@ -113,7 +114,8 @@ class Classe(models.Model):
     id = models.CharField(primary_key=True, max_length=20)
     desc = models.TextField(null=True)
     dv = models.IntegerField(null=True)
-    choix_competences = models.ManyToManyField('Competence')
+    choix_competences = models.ManyToManyField(
+        'Competence', related_name='classes')
     nb_competences = models.IntegerField(default=2)
     jets_sauvegarde = models.ManyToManyField('Caracteristique')
 
@@ -128,6 +130,8 @@ class PJ(models.Model):
     classe = models.ForeignKey(
         'Classe', null=True, related_name='PJs', on_delete=models.CASCADE)
     maitrise_competences = models.ManyToManyField('Competence')
+    historique = models.ForeignKey(
+        'Historique', null=True, related_name='PJs', on_delete=models.CASCADE)
 
     force = models.IntegerField(null=True, blank=True)
     constitution = models.IntegerField(null=True, blank=True)
@@ -183,6 +187,9 @@ class PJ(models.Model):
                         race=self.race, caracteristique='cha').valeur
                 except:
                     self.charisme = 10
+        if self.historique:
+            for comp in self.historique.competences.all():
+                self.maitrise_competences.add(comp)
         super(PJ, self).save(*args, **kwargs)
 
 # Gestion des formulaire admin pour le m2m

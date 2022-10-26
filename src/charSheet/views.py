@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render
-from .forms import CaractForm, CreateForm, ClasseForm, CompetencesForm, RaceForm
+from .forms import CaractForm, CreateForm, ClasseForm, CompetencesForm, HistoriqueForm, RaceForm
 from .models import PJ, BonusCaracteristique
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView
@@ -29,6 +29,15 @@ class UpdateRaceView(UpdateView):
 class UpdateClasseView(UpdateView):
     model = PJ
     form_class = ClasseForm
+    template_name = 'charSheet/classe_form.html'
+
+    def get_success_url(self):
+        return reverse('historique', args=(self.object.id,))
+
+
+class UpdateHistoriqueView(UpdateView):
+    model = PJ
+    form_class = HistoriqueForm
     template_name = 'charSheet/classe_form.html'
 
     def get_success_url(self):
