@@ -1,1 +1,1213 @@
-[{"model": "charSheet.caracteristique", "pk": "cha", "fields": {"nom": "charisme", "desc": "Le Charisme détermine votre capacité à interagir efficacement avec les autres. Il comprend des facteurs comme la confiance et l'éloquence, et peut représenter une personnalité charmante ou dominante."}}, {"model": "charSheet.caracteristique", "pk": "con", "fields": {"nom": "constitution", "desc": "La Constitution détermine la santé, l'endurance et la force vitale."}}, {"model": "charSheet.caracteristique", "pk": "dex", "fields": {"nom": "dextérité", "desc": "La Dextérité détermine l'agilité, les réflexes et l'équilibre."}}, {"model": "charSheet.caracteristique", "pk": "for", "fields": {"nom": "force", "desc": "La Force détermine la puissance physique, l'entrainement sportif et la mesure dans laquelle vous pouvez exercer une force physique brute."}}, {"model": "charSheet.caracteristique", "pk": "int", "fields": {"nom": "intelligence", "desc": "L'intelligence détermine l'acuité mentale, la précision de la mémoire et la capacité à raisonner."}}, {"model": "charSheet.caracteristique", "pk": "sag", "fields": {"nom": "sagesse", "desc": "La Sagesse reflète la façon dont vous êtes à l'écoute du monde autour de vous, ainsi que la perspicacité et l'intuition."}}, {"model": "charSheet.competence", "pk": "acrobaties", "fields": {"desc": "Un jet de Dextérité (Acrobaties) couvre votre tentative pour rester sur vos pieds dans une situation délicate, comme lorsque vous essayez de courir sur de la glace, de tenir en équilibre sur une corde raide, ou de rester debout sur le pont d'un navire chahuté. Le MD peut également demander un jet de Dextérité (Acrobaties) pour voir si vous pouvez effectuer des acrobaties, comme un plongeon, une roulade ou un saut périlleux.", "caracteristique": "dex"}}, {"model": "charSheet.competence", "pk": "arcanes", "fields": {"desc": "Un jet d'Intelligence (Arcanes) évalue votre aptitude à vous rappeler des choses à propos de sorts, d'objets magiques, de symboles occultes, de traditions magiques, de plans d'existence ou des habitants de ces plans.", "caracteristique": "int"}}, {"model": "charSheet.competence", "pk": "athlétisme", "fields": {"desc": "Un jet de Force (Athlétisme) couvre les situations difficiles que vous rencontrez en grimpant, en sautant ou nageant.", "caracteristique": "for"}}, {"model": "charSheet.competence", "pk": "discrétion", "fields": {"desc": "Faite un jet de Dextérité (Discrétion) lorsque vous essayez de vous cacher des ennemis, de vous glisser entre des gardes, filer sans vous faire remarquer, ou vous échapper sans être vu ou entendu.", "caracteristique": "dex"}}, {"model": "charSheet.competence", "pk": "dressage", "fields": {"desc": "Quand il est question de savoir si vous pouvez calmer un animal domestique, faire qu'une monture ne s'effraye pas, ou deviner les intentions d'un animal, le MD peut demander un jet de Sagesse (Dressage). Vous pouvez également faire un jet de Sagesse (Dressage) pour contrôler votre monture lorsque vous tentez une manœuvre risquée.", "caracteristique": "sag"}}, {"model": "charSheet.competence", "pk": "escamotage", "fields": {"desc": "Chaque fois que vous tentez une manipulation ou une fourberie, comme prendre quelque chose à quelqu'un ou dissimuler un objet sur vous-même, faites un jet de Dextérité (Escamotage). Le MD peut également demander un jet de Dextérité (Escamotage) pour déterminer si vous pouvez dérober une bourse ou glisser quelque chose dans la poche de quelqu'un.", "caracteristique": "dex"}}, {"model": "charSheet.competence", "pk": "histoire", "fields": {"desc": "Un jet d'Intelligence (Histoire) évalue votre aptitude à vous rappeler des choses à propos d'événements historiques, de personnages légendaires, d'anciens royaumes, de conflits passés, de guerres récentes et de civilisations perdues.", "caracteristique": "int"}}, {"model": "charSheet.competence", "pk": "intimidation", "fields": {"desc": "Lorsque vous essayez d'influencer les gens par des menaces ouvertes, des actions hostiles, ou de la violence physique, le MD peut vous demander de faire un jet de Charisme (Intimidation). Cela peut appliquer pour essayer de soutirer des informations à un prisonnier, convaincre des voyous de renoncer à une confrontation, ou utiliser un tesson de bouteille pour convaincre un vizir sarcastique de réexaminer sa décision.", "caracteristique": "cha"}}, {"model": "charSheet.competence", "pk": "intuition", "fields": {"desc": "Un jet de Sagesse (Intuition) détermine si vous pouvez déceler les véritables intentions d'une créature, comme lorsque vous tentez de savoir si elle ment ou pour prévoir son prochain mouvement. Cela implique de lire le langage du corps, détecter ses habitudes de langage et les changements dans ses manières.", "caracteristique": "sag"}}, {"model": "charSheet.competence", "pk": "investigation", "fields": {"desc": "Lorsque vous regardez autour de vous pour trouver des indices et faire des déductions sur la base de ces indices, vous faites un jet d'Intelligence (Investigation). Vous pouvez en déduire l'emplacement d'un objet caché, discerner en fonction de l'apparence d'une blessure le type d'arme utilisé, ou déterminer le point faible dans un tunnel pour causer son effondrement. Se pencher sur d'anciens manuscrits à la recherche d'informations cachées peut aussi demander un jet d'Intelligence (Investigation).", "caracteristique": "int"}}, {"model": "charSheet.competence", "pk": "médecine", "fields": {"desc": "Un jet de Sagesse (Médecine) permet d'essayer de stabiliser un compagnon mourant ou de diagnostiquer une maladie.", "caracteristique": "sag"}}, {"model": "charSheet.competence", "pk": "nature", "fields": {"desc": "Un jet d'Intelligence (Nature) Ã©value votre aptitude Ã  vous rappeler des informations sur un type de terrain, des plantes ou des animaux, la mÃ©tÃ©o et les cycles naturels.", "caracteristique": "int"}}, {"model": "charSheet.competence", "pk": "perception", "fields": {"desc": "Un jet de Sagesse (Perception) permet de repérer, entendre ou détecter la présence de quelque chose. Il mesure votre conscience de l'environnement et l'acuité de vos sens. Par exemple, vous pouvez essayer d'entendre une conversation à travers une porte fermée, espionner par une fenêtre ouverte, ou entendre des monstres se faufiler dans la forêt. Vous pouvez aussi essayer de repérer des choses qui sont cachées ou difficiles à déceler, que ce soient des orcs en embuscade sur une route, des voyous cachés dans l'ombre d'une ruelle ou la lueur d'une chandelle sous une porte secrète fermée.", "caracteristique": "sag"}}, {"model": "charSheet.competence", "pk": "persuasion", "fields": {"desc": "Lorsque vous essayez d'influencer quelqu'un ou un groupe de personnes avec tact, grâce, ou de bonnes manières, le MD peut vous demander de faire un jet de Charisme (Persuasion). En règle générale, vous utilisez la persuasion lorsque vous agissez de bonne foi, afin de favoriser l'amitié, faire des demandes cordiales, ou utiliser l'étiquette appropriée. Vous pouvez utiliser la persuasion pour convaincre un chambellan de laisser votre groupe voir le roi, négocier la paix entre deux tribus en guerre, ou motiver une foule de citadins", "caracteristique": "cha"}}, {"model": "charSheet.competence", "pk": "religion", "fields": {"desc": "Un jet d'Intelligence (Religion) évalue votre aptitude à vous rappeler des choses à propos des dieux, des rites et des prières, la hiérarchie religieuse, les symboles sacrés et les pratiques de cultes secrets.", "caracteristique": "int"}}, {"model": "charSheet.competence", "pk": "représentation", "fields": {"desc": "Un jet de Charisme (Représentation) détermine la façon dont vous pouvez enchanter un public par la musique, la danse, le théâtre, le conte ou toute autre forme de divertissement.", "caracteristique": "cha"}}, {"model": "charSheet.competence", "pk": "survie", "fields": {"desc": "Le MD peut vous demander de faire un jet de Sagesse (Survie) pour suivre des traces, chasser du gibier sauvage, guider votre groupe sur un terrain gelé, identifier des traces indiquant qu'un ours-hibou vit à proximité, prévoir le temps ou éviter des sables mouvants et autres catastrophes naturelles.", "caracteristique": "sag"}}, {"model": "charSheet.competence", "pk": "tromperie", "fields": {"desc": "Un jet de Charisme (Tromperie) détermine si vous pouvez cacher la vérité avec efficacité, soit verbalement, soit par vos actions. La tromperie peut englober beaucoup de choses, depuis l'ambiguïté de ses dires jusqu'au mensonge pur et simple. Des situations typiques sont d'essayer d'embobiner un garde, duper un commerçant, gagner de l'argent au jeu, vous faire passer pour quelqu'un d'autre à l'aide d'un déguisement, apaiser les soupçons de quelqu'un avec une fausse assurance, ou maintenir un visage impassible tout en racontant un mensonge flagrant.", "caracteristique": "cha"}}, {"model": "charSheet.classe", "pk": "barbare", "fields": {"desc": "Drapé de fourrure et portant une hache, un humain tribal de haute taille marche à grandes enjambées à travers le blizzard. Riant aux éclats, il charge le géant du givre qui a osé s'en prendre au troupeau de son clan. Une demi-orc grogne férocement contre le dernier adversaire qui a voulu remettre en cause son autorité sur la tribu, prête à lui briser le cou comme elle l'a fait avec les six précédents. L'écume aux lèvres, un nain balance son casque dans le visage d'un premier ennemi drow puis, se retournant, envoie sa cubitière dans le ventre d'un second.", "dv": 12, "nb_competences": 2, "choix_competences": ["athlétisme", "dressage", "intimidation", "nature", "perception", "survie"], "jets_sauvegarde": ["con", "for"]}}, {"model": "charSheet.classe", "pk": "barde", "fields": {"desc": "Fredonnant alors qu’elle passe ses doigts sur un ancien monument au cœur de ruines depuis longtemps oubliées, une demi-elfe vêtue de cuir robuste sent le savoir, invoqué par la magie de son chant, bondir dans son esprit. Le savoir de ceux qui ont érigé ce monument. Le savoir relatant la saga mythique qui y est illustrée. Un solide guerrier humain frappe son épée avec rythme sur son armure d’écailles, instaurant un tempo pour accompagner son chant de guerre et exhortant ses compagnons à la bravoure et à l’héroïsme. La magie de son chant les fortifie et les enhardit. Accordant son cistre tout en rigolant, une gnome tisse sa subtile magie sur l’assemblée des nobles, s'assurant ainsi que les paroles de ses compagnons seront bien reçues.", "dv": 8, "nb_competences": 3, "choix_competences": ["acrobaties", "arcanes", "athlétisme", "discrétion", "dressage", "escamotage", "histoire", "intimidation", "intuition", "investigation", "médecine", "nature", "perception", "persuasion", "religion", "représentation", "survie", "tromperie"], "jets_sauvegarde": ["cha", "dex"]}}, {"model": "charSheet.classe", "pk": "clerc", "fields": {"desc": "Les bras et les yeux levés en direction du soleil, une prière sur les lèvres, un elfe commence à briller d'une lumière intérieure qui s'en va guérir ses compagnons usés par le combat. Chantant une chanson de gloire, un nain fait osciller sa hache en de larges mouvements circulaires afin de couper les rangs orcs face à lui, criant des louanges aux dieux à chaque ennemi qui tombe. Jetant une malédiction sur les morts-vivants qui s'avancent, un humain brandit son symbole sacré alors qu'une lumière se libère de celui-ci pour repousser les zombis qui se pressaient sur ses compagnons.", "dv": 8, "nb_competences": 2, "choix_competences": ["histoire", "intuition", "médecine", "persuasion", "religion"], "jets_sauvegarde": ["cha", "sag"]}}, {"model": "charSheet.classe", "pk": "druide", "fields": {"desc": "Tenant bien haut un bâton noueux couronné de houx, une elfe convoque la fureur des tempêtes et en appelle à la puissance foudroyante des éclairs pour punir les porteurs de torches orcs qui menacent sa forêt. Sous forme de léopard, s'accroupissant sur la branche d'un grand arbre à l'abri des regards, un humain scrute à travers la jungle l'étrange construction d'un temple de l'Air du Mal élémentaire, gardant un œil fixé sur les activités des cultistes. Brandissant une épée faîte de feu pur, un demi-elfe charge dans la masse des soldats squelettes, brisant la magie antinaturelle qui a donné à ces immondes créatures un dérisoire semblant de vie.", "dv": 8, "nb_competences": 2, "choix_competences": ["arcanes", "dressage", "intuition", "médecine", "nature", "perception", "religion", "survie"], "jets_sauvegarde": ["int", "sag"]}}, {"model": "charSheet.classe", "pk": "ensorceleur", "fields": {"desc": "Avec son regard éclatant d’une lumière dorée, une humaine tend sa main et libère le feu du dragon qui lui brûle les veines. Alors que l’enfer engouffre ses ennemis, une paire d’ailes émerge de son dos, puis elle prend son envol. Sa longue chevelure battue par un vent invoqué, un demi-elfe écarte les bras et lève les yeux au ciel. Le soulevant momentanément du sol, une vague de magie se décharge en lui, à travers lui et par lui, en une puissante explosion foudroyante. Accroupie derrière une stalagmite, une halfeline pointe du doigt un troglodyte qui charge. Une déflagration de feu surgit de son doigt pour atteindre la créature. Elle se replie derrière le rocher avec le sourire, inconsciente du fait que sa magie sauvage a coloré sa peau d’un bleu éclatant.", "dv": 6, "nb_competences": 2, "choix_competences": ["arcanes", "intimidation", "intuition", "persuasion", "religion", "tromperie"], "jets_sauvegarde": ["cha", "con"]}}, {"model": "charSheet.classe", "pk": "guerrier", "fields": {"desc": "Un humain équipé d'un harnois clinquant brandit son bouclier devant lui tout en fonçant vers des gobelins massés. Un elfe, derrière lui, vêtu d'une armure de cuir clouté, arrose ces mêmes gobelins avec les flèches qu'il décoche de son précieux arc. Le demi-orc à proximité lance des ordres, aidant les deux combattants à coordonner leur assaut au mieux. Un nain en cotte de mailles interpose son bouclier entre la massue d'un ogre et son compagnon, puis assène un coup mortel de côté. Son compagnon, un demi-elfe en armure d'écailles, fait virevolter deux cimeterres dans un tourbillon aveuglant tout en contournant l'ogre, à la recherche d'un point faible dans sa défense. Un combat de gladiateurs pour le spectacle dans une arène, un maître du trident avec son filet, entraîné à renverser ses ennemis et à se déplacer autour d'eux pour le plaisir et de la foule, et pour son propre avantage tactique.", "dv": 10, "nb_competences": 2, "choix_competences": ["acrobaties", "athlétisme", "dressage", "histoire", "intimidation", "intuition", "perception", "survie"], "jets_sauvegarde": ["con", "for"]}}, {"model": "charSheet.classe", "pk": "magicien", "fields": {"desc": "Vêtue d'une robe d'argent qui dénote son rang, une elfe ferme les yeux pour s'éloigner des distractions du champ de bataille et commence son chant. Les doigts croisés face à elle, elle achève son sort et lance une petite perle de feu vers les rangs ennemis, laquelle éclate lorsqu'elle arrive à son but et engloutit les soldats lors de son explosion. Vérifiant et revérifiant son travail, un humain dessine à la craie sur le sol de pierre un cercle magique intriguant, puis saupoudre le long de chaque ligne et chaque courbe de la limaille de fer. Une fois le travail accompli, il se lance dans une longue incantation. Un trou s'ouvre alors dans l'espace à l'intérieur du cercle, libérant une bouffée de soufre provenant du plan d'un autre monde. Accroupi au sol à l'intersection de deux couloirs d'un donjon, un gnome jette une poignée de petits os gravés de symboles mystiques, tout en murmurant quelques mots de pouvoir. Il ferme alors ses yeux pour voir les visions plus clairement, hoche la tête lentement, puis ouvre les yeux et pointe le passage à sa gauche.", "dv": 6, "nb_competences": 2, "choix_competences": ["arcanes", "histoire", "intuition", "investigation", "médecine", "religion"], "jets_sauvegarde": ["int", "sag"]}}, {"model": "charSheet.classe", "pk": "moine", "fields": {"desc": "Ses paumes floues alors qu'elles dévient une pluie de flèches, une demi-elfe saute par-dessus la barricade et se jette au beau milieu des rangs d'hobgobelins massés de l'autre côté. Elle tournoie parmi eux, les frappant dans les côtes et les envoyant tituber, jusqu'à ce qu'elle se retrouve la dernière debout. Prenant une profonde inspiration, un humain recouvert de tatouages se met en position de combat. Alors que les premiers orcs qui chargent l'atteignent, il souffle, et un déferlement de flammes jaillit de sa bouche, submergeant ses ennemis. Se déplaçant aussi silencieusement que la nuit, une halfeline toute vêtue de noir s'enfonce dans l'ombre d'une arcade et émerge d'une autre nappe d'ombre sur un balcon, à un jet de pierre de distance. Elle glisse sa lame hors de son fourreau enveloppé de tissus et passe par la fenêtre de la chambre du prince tyrannique, tellement vulnérable dans les bras de Morphée.", "dv": 8, "nb_competences": 2, "choix_competences": ["acrobaties", "athlétisme", "discrétion", "histoire", "intuition", "religion"], "jets_sauvegarde": ["dex", "for"]}}, {"model": "charSheet.classe", "pk": "occultiste", "fields": {"desc": "Un pseudodragon lové sur ses épaules, un jeune elfe vêtu d’une robe dorée sourit chaleureusement, tissant la trame d’un sortilège avec ses paroles mielleuses tout en incitant les sentinelles du palais à se plier à sa volonté. Alors que les flammes surgissent de sa main, une humaine flétrie susurre le nom secret de son patron démoniaque, insufflant à son sort une magie diabolique. Balayant son regard entre un livre vétuste et l’étrange alignement des astres, un tieffelin éperdu psalmodie un rituel mystique qui ouvrira un portail vers un monde distant.", "dv": 8, "nb_competences": 2, "choix_competences": ["arcanes", "histoire", "intimidation", "investigation", "nature", "religion", "tromperie"], "jets_sauvegarde": ["cha", "sag"]}}, {"model": "charSheet.classe", "pk": "paladin", "fields": {"desc": "Vêtue d'une armure étincelante sous le soleil, malgré la poussière et la crasse accumulées durant ce long voyage, une humaine pose à terre son épée et son bouclier, puis, sur le corps d'un homme mortellement blessé, elle appose ses mains. Un rayonnement divin s'en échappe, refermant les blessures de l'homme qui ouvre alors les yeux, stupéfait. Accroupis derrière un affleurement rocheux, son manteau noir le rendant quasi invisible dans la nuit, un nain observe une troupe d'orcs fêtant leur dernière victoire. En silence, il s'infiltre dans leur camp et chuchote un serment : deux orcs tombent raide morts avant même d'avoir pu entrevoir sa présence. Sa chevelure couleur argent brillant dans le puits de lumière qui ne semble illuminer que lui, un elfe rit, exultant. Sa lance, comme ses yeux, envoie des éclairs alors qu'il virevolte encore et encore autour d'un géant difforme, jusqu'à ce que sa lumière triomphe de cette hideuse obscurité.", "dv": 10, "nb_competences": 2, "choix_competences": ["athlétisme", "intimidation", "intuition", "médecine", "persuasion", "religion"], "jets_sauvegarde": ["cha", "sag"]}}, {"model": "charSheet.classe", "pk": "roublard", "fields": {"desc": "Signifiant à ses compagnons d'attendre, un halfelin avance lentement dans la salle du donjon. Il colle son oreille à la porte, puis sort un jeu d'outils et crochète la serrure en un clin d'œil. Il disparaît ensuite dans l'ombre, lorsque son ami guerrier avance pour frapper la porte ouverte. Un humain se cache dans l'ombre d'une ruelle tandis que son complice se prépare pour l'embuscade. Quand leur cible, un esclavagiste notoire, passe en face de la ruelle, le complice crie, l'esclavagiste vient voir ce qui se passe, et la lame de l'assassin lui coupe la gorge avant qu'il ne puisse faire le moindre bruit. Une gnome agite ses doigts et soulève par magie le trousseau de clés à la ceinture du garde. En un instant, les clés sont dans sa main, la porte de la cellule est ouverte, et elle et ses compagnons sont libres de prendre la fuite.", "dv": 8, "nb_competences": 4, "choix_competences": ["acrobaties", "athlétisme", "discrétion", "escamotage", "intimidation", "intuition", "investigation", "perception", "persuasion", "représentation", "tromperie"], "jets_sauvegarde": ["dex", "int"]}}, {"model": "charSheet.classe", "pk": "rôdeur", "fields": {"desc": "D'aspect sauvage et rude, un humain traque seul à travers les ombres des arbres, chassant les orcs qu'il sait préparer l'attaque d'une ferme alentour. Armé d'une épée courte dans chaque main il devient une tornade de métal, tranchant les ennemis les uns après les autres. Après avoir fait une roulade loin d'un souffle d'air gelé, une elfe se redresse d'un bond et dégaine son arc, décochant au passage une flèche vers le dragon blanc. S'affranchissant de la vague de terreur qui émane de lui comme la morsure glacée de son souffle, elle fait pleuvoir ses traits les uns après les autres afin de trouver un point faible entre les épaisses écailles du dragon. Levant sa main en l'air, un demi-elfe siffle vers le faucon qui vole en cercle au-dessus de lui, l'appelant à ses côtés. Chuchotant des instructions en elfique, il pointe du doigt l'ours-hibou qu'il traquait et envoie le rapace distraire la créature pendant qu'il bande son arc.", "dv": 10, "nb_competences": 3, "choix_competences": ["athlétisme", "discrétion", "dressage", "intuition", "investigation", "nature", "perception", "survie"], "jets_sauvegarde": ["dex", "for"]}}]
+[
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Agilité halfeline",
+        "fields": {
+            "desc": "Vous pouvez passer dans l'espace de toute créature d'une taille supérieure à la vôtre."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Ascendance féerique",
+        "fields": {
+            "desc": "Vous avez un avantage aux jets de sauvegarde contre les effets de charme et la magie ne peut pas vous endormir."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Attaques sauvages",
+        "fields": {
+            "desc": "Lorsque vous réalisez un coup critique lors d'une attaque au corps à corps avec une arme, vous pouvez lancer l'un des dés de dégâts de l'arme une deuxième fois et l'ajouter aux dégâts supplémentaires du coup critique."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Brave",
+        "fields": {
+            "desc": "Vous avez un avantage aux jets de sauvegarde pour ne pas être effrayé."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Bricoleur",
+        "fields": {
+            "desc": "Vous maîtrisez les outils de bricoleur. En utilisant ces outils, vous pouvez passer 1 heure et dépenser pour 10 po de matériaux pour construire un mécanisme de taille TP, de CA 5 et 1 pv. Le dispositif cesse de fonctionner après 24 heures (sauf si vous passez 1 heure à le réparer) ou si vous utilisez une action pour le démonter ; à ce moment, vous pouvez récupérer les matériaux que vous avez utilisés pour le créer. Vous pouvez avoir jusqu'à trois de ces dispositifs actifs à la fois. Lorsque vous créez un mécanisme, choisissez l'une des options suivantes :\r\n\r\n    Allume feu. Le mécanisme produit une toute petite flamme qui peut être utilisée pour allumer une bougie ou une torche au prix d'une action.\r\n    Boîte à musique. Lorsqu'on l'ouvre, la boîte reproduit une chanson (toujours la même) à un volume modéré jusqu'à la fin du morceau ou avant si la boîte est refermée.\r\n    Jouet mécanique. Le jouet représente un animal ou une personne, comme une grenouille, une souris, un oiseau ou un soldat, sur des roulettes. Lorsqu'il est placé sur le sol, il se déplace de 1,50 mètre chaque tour dans une direction aléatoire et fait des bruits en fonction de la créature qu'il représente."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Cachette naturelle",
+        "fields": {
+            "desc": "Vous pouvez tenter de vous cacher dans une zone à visibilité réduite, comme en présence de branchages, de forte pluie, de neige qui tombe, de brume ou autre phénomène naturel."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Chanceux",
+        "fields": {
+            "desc": "Lorsque vous obtenez un 1 au dé d'un jet d'attaque, de caractéristique ou de sauvegarde, vous pouvez relancer le dé et devez alors utiliser ce nouveau résultat."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Connaissance de la pierre",
+        "fields": {
+            "desc": "Chaque fois que vous effectuez un jet d'Intelligence (Histoire) en relation avec l'origine d'un travail lié à la pierre, considérez que vous maîtrisez la compétence Histoire et ajoutez le double de votre bonus de maîtrise au jet, au lieu du bonus de maîtrise normal"
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Connaissance en ingénierie",
+        "fields": {
+            "desc": "Chaque fois que vous effectuez un jet d'Intelligence (Histoire) en relation avec l'alchimie, des objets magiques ou des dispositifs technologiques, ajoutez le double de votre bonus de maîtrise au jet, au lieu du bonus de maîtrise normal."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Discrétion naturelle",
+        "fields": {
+            "desc": "Vous pouvez tenter de vous cacher si vous vous trouvez derrière une créature d'une taille supérieure à la vôtre."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Endurance implacable",
+        "fields": {
+            "desc": "Lorsque vous tombez à 0 point de vie, mais que vous n'êtes pas tué sur le coup, vous pouvez passer à 1 point de vie à la place. Vous devez terminer un repos long avant de pouvoir utiliser cette capacité de nouveau."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Entraînement aux armes drows",
+        "fields": {
+            "desc": "Vous obtenez la maîtrise des rapières, des épées courtes et des arbalètes de poing."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Entraînement aux armes elfiques",
+        "fields": {
+            "desc": "Vous obtenez la maîtrise des épées (longues et courtes) et des arcs (longs et courts)."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Entraînement aux armes naines",
+        "fields": {
+            "desc": "Vous obtenez la maîtrise des hachettes, des haches d'armes, des marteaux légers et des marteaux de guerre."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Formation au port des armures naines",
+        "fields": {
+            "desc": "Vous maîtrisez les armures légères et intermédiaires."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Foulée légère",
+        "fields": {
+            "desc": "Votre vitesse de base passe à 10,50 mètres."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Langue supplémentaire",
+        "fields": {
+            "desc": "Vous parlez, lisez et écrivez une langue supplémentaire de votre choix."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Magie drow",
+        "fields": {
+            "desc": "Vous connaissez le sort mineur lumières dansantes. Lorsque vous atteignez le niveau 3, vous pouvez lancer le sort lueurs féeriques une fois avec ce trait et regagnez cette capacité lorsque vous terminez un repos long. Lorsque vous atteignez le niveau 5, vous pouvez lancer le sort ténèbres une fois avec ce trait et regagnez cette capacité lorsque vous terminez un repos long. Le Charisme est votre caractéristique d'incantation pour ces sorts."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Maîtrise des outils",
+        "fields": {
+            "desc": "Vous obtenez la maîtrise d'un des outils d'artisan suivant au choix : outils de forgeron, outils de brasseur ou outils de maçon."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Menaçant",
+        "fields": {
+            "desc": "Vous gagnez la maîtrise de la compétence Intimidation."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Polyvalence",
+        "fields": {
+            "desc": "Vous gagnez la maîtrise de deux compétences de votre choix."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Ruse gnome",
+        "fields": {
+            "desc": "Vous avez un avantage aux jets de sauvegarde d'Intelligence, de Sagesse et de Charisme contre la magie."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Résistance des robustes",
+        "fields": {
+            "desc": "Vous obtenez un avantage aux jets de sauvegarde contre le poison et la résistance contre les dégâts de poison."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Résistance naine",
+        "fields": {
+            "desc": "Vous avez un avantage aux jets de sauvegarde contre le poison et obtenez la résistance contre les dégâts de poison."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Sens aiguisés",
+        "fields": {
+            "desc": "Vous maîtrisez la compétence Perception."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Sensibilité au soleil",
+        "fields": {
+            "desc": "Vous avez un désavantage aux jets d'attaque et aux jets de Sagesse (Perception) basés sur ​​la vue quand vous, la cible de l'attaque ou ce que vous essayez de détecter est exposé à la lumière du soleil."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Sort mineur",
+        "fields": {
+            "desc": "Vous connaissez un sort mineur de votre choix parmi la liste des sorts mineurs de magicien. L'Intelligence est votre caractéristique d'incantation pour ce sort."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Teint pierreux",
+        "fields": {
+            "desc": "Vous avez l'avantage aux jets de Dextérité (Discrétion) pour vous cacher sur un terrain rocheux."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Transe",
+        "fields": {
+            "desc": "Les elfes n'ont pas besoin de dormir. Au lieu de cela, ils méditent profondément, restant à demi conscients, 4 heures par jour (le mot commun pour désigner cette méditation est « transe »). En méditant, vous pouvez rêver, tant bien que mal ; ces rêves sont en fait des exercices mentaux qui deviennent un réflexe après des années de pratique. Après un repos de ce type, vous obtenez les mêmes avantages qu'un humain après 8 heures de sommeil."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Ténacité naine",
+        "fields": {
+            "desc": "Votre maximum de points de vie augmente de 1 à chaque niveau."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Vision dans le noir",
+        "fields": {
+            "desc": "Vous pouvez voir à 18 mètres dans une lumière faible comme vous verriez avec une lumière vive, et dans le noir comme vous verriez avec une lumière faible. Dans le noir, vous ne discernez pas les couleurs, uniquement des nuances de gris."
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "Vision dans le noir supérieure",
+        "fields": {
+            "desc": "Votre vision dans le noir est étendue à 36 mètres"
+        }
+    },
+    {
+        "model": "charSheet.racecapacite",
+        "pk": "aucun",
+        "fields": {
+            "desc": "humain"
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "Elfe noir (drow)",
+        "fields": {
+            "desc": "En tant que drow, vous êtes imprégné par la magie de l'Outreterre, un royaume souterrain fait de merveilles et d'horreurs que l'on voit rarement à la surface. Vous êtes chez vous dans les ombres et, grâce à votre magie innée, vous pouvez invoquer à la fois la lumière et les ténèbres. Les vôtres ont tendance à avoir les cheveux blancs et la peau grisâtre.\r\n\r\nLe culte de la déesse Lolth, la Reine des araignées, a corrompu certaines des plus anciennes cités drows, en particulier dans l'univers de Greyhawk et sur Toril. Eberron, Krynn et d'autres mondes échappent à l'influence du culte... pour l'instant. Mais partout où le culte est une menace, des héros drows se dressent contre lui, cherchant à briser la toile tentaculaire de Lolth.",
+            "taille_max": 180,
+            "taille_min": 150,
+            "vitesse": "9.0",
+            "famille": "elfe",
+            "capacite": [
+                "Ascendance féerique",
+                "Entraînement aux armes drows",
+                "Magie drow",
+                "Sens aiguisés",
+                "Sensibilité au soleil",
+                "Transe",
+                "Vision dans le noir",
+                "Vision dans le noir supérieure"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "Halfelin pied-léger",
+        "fields": {
+            "desc": "En tant que halfelin pied-léger, vous pouvez facilement vous cacher, en utilisant même d'autres personnes comme abri. Vous avez tendance à être affable et à bien vous entendre avec les autres. Les halfelins pied-léger sont ceux qui ont le plus migré et sont donc la sous-race la plus commune. Ils sont les plus enclins à voyager de tous les halfelins, et vivent souvent avec d'autres races ou embrassent une vie de nomade.",
+            "taille_max": 110,
+            "taille_min": 70,
+            "vitesse": "7.5",
+            "famille": "halfelin",
+            "capacite": [
+                "Agilité halfeline",
+                "Brave",
+                "Chanceux",
+                "Discrétion naturelle"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "demi-elfe",
+        "fields": {
+            "desc": "",
+            "taille_max": 180,
+            "taille_min": 150,
+            "vitesse": "9.0",
+            "famille": null,
+            "capacite": [
+                "Ascendance féerique",
+                "Polyvalence",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "demi-orc",
+        "fields": {
+            "desc": "Que ce soit unis sous la direction d'un puissant occultiste ou lors de trêves après des années de conflit, les tribus orcs et humaines forment parfois des alliances, unissant leurs forces en une horde encore plus grande qui engendre la terreur dans les terres civilisées proches. Et lorsque ces alliances sont scellées par des mariages, des demi-orcs naissent. Certains deviennent de fiers chefs de tribus orcs, leur sang humain leur donnant un avantage sur leurs rivaux orcs. Certains s'aventurent dans le monde afin de prouver leur valeur parmi les humains ou d'autres races plus civilisées. Beaucoup d'entre eux deviennent alors des aventuriers, acquérant la grandeur à travers leurs hauts faits et la notoriété à travers leurs coutumes barbares et leur fureur sauvage.",
+            "taille_max": 210,
+            "taille_min": 180,
+            "vitesse": "9.0",
+            "famille": null,
+            "capacite": [
+                "Attaques sauvages",
+                "Endurance implacable",
+                "Menaçant",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "elfe",
+        "fields": {
+            "desc": "Les elfes sont des créatures magiques d’une extraordinaire grâce, habitant le monde sans en faire totalement partie. Ils vivent dans des lieux d’une beauté éthérée, au cœur d’anciennes forêts ou dans des tours scintillantes d’une lumière féerique, là où une douce musique flotte dans l’air et où de subtils effluves embaument la brise. Les elfes aiment la nature et la magie, l’art et l’artisanat, la musique et la poésie, et les bonnes choses de ce monde.",
+            "taille_max": 150,
+            "taille_min": 180,
+            "vitesse": "9.0",
+            "famille": "elfe",
+            "capacite": [
+                "Ascendance féerique",
+                "Sens aiguisés",
+                "Transe",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "elfe des bois",
+        "fields": {
+            "desc": "En tant qu'elfe des bois, vous avez des sens aiguisés et une forte intuition. Vous vous déplacez rapidement et discrètement dans vos forêts. Les elfes des bois (également appelés elfes sauvages, elfes verts ou elfes des forêts) sont reclus et méfiants envers les non-elfes. La peau des elfes des bois tend à être cuivrée, parfois avec des traces de vert. Leurs cheveux tendent vers le brun et le noir, mais peuvent parfois aussi être blonds ou cuivrés. Leurs yeux sont verts, bruns ou noisette.",
+            "taille_max": 180,
+            "taille_min": 150,
+            "vitesse": "10.5",
+            "famille": null,
+            "capacite": [
+                "Ascendance féerique",
+                "Cachette naturelle",
+                "Entraînement aux armes elfiques",
+                "Foulée légère",
+                "Sens aiguisés",
+                "Transe",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "gnome des forêts",
+        "fields": {
+            "desc": "Les gnomes des forêts se réunissent dans des communautés cachées au sein des forêts, souvent loin des routes et des chemins de la civilisation. Timides et discrets, ces gnomes évitent la confrontation autant que possible en utilisant l'illusion et la ruse pour se cacher des menaces ou pour masquer leur fuite s'ils ont été débusqués. Les gnomes des forêts ont tendance à être amicaux avec les autres habitants des bois, et considèrent les elfes et les fées bonnes comme leurs alliés les plus importants. Ils se lient aussi d'amitié avec les petits animaux de la forêt, sur lesquels ils comptent pour obtenir des informations sur les menaces qui pourraient planer sur leurs terres.",
+            "taille_max": 120,
+            "taille_min": 90,
+            "vitesse": "7.5",
+            "famille": "gnome",
+            "capacite": [
+                "Ruse gnome",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "gnome des profondeur",
+        "fields": {
+            "desc": "Les gnomes des forêts et les gnomes des roches sont les gnomes les plus fréquemment rencontrés sur les terres du monde de la surface. Mais il existe une autre sous-race de gnomes que les habitants de la surface ne rencontrent que rarement : les gnomes des profondeurs, aussi connus comme les svirfnebelins. Sur leurs gardes, et se méfiant des étrangers, les svirfnebelins sont rusés et taciturnes, mais peuvent être tout aussi bons, loyaux et compatissants que leurs cousins de la surface.",
+            "taille_max": 105,
+            "taille_min": 90,
+            "vitesse": "7.5",
+            "famille": null,
+            "capacite": [
+                "Ruse gnome",
+                "Teint pierreux",
+                "Vision dans le noir supérieure"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "gnome des roches",
+        "fields": {
+            "desc": "Les gnomes des roches établissent leurs communautés dans les collines et les montagnes, là où ils peuvent avoir accès aux matériaux dont ils ont besoin pour construire et bricoler. Ces maîtres artisans sont inégalés lorsqu'on parle de tailler des gemmes ou de mécanique et autres merveilles technologiques. Leurs réalisations sont recherchées dans le monde entier.",
+            "taille_max": 120,
+            "taille_min": 90,
+            "vitesse": "7.5",
+            "famille": "gnome",
+            "capacite": [
+                "Bricoleur",
+                "Connaissance en ingénierie",
+                "Ruse gnome",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "halfelin robuste",
+        "fields": {
+            "desc": "En tant que halfelin robuste, vous êtes plus costaud que la moyenne et possédez une certaine résistance au poison. Certains disent que les robustes ont du sang nain. Aussi appelés halfelins vaillants, ce sont les plus communs au sud des Royaumes Oubliés.",
+            "taille_max": 110,
+            "taille_min": 70,
+            "vitesse": "7.5",
+            "famille": "halfelin",
+            "capacite": [
+                "Agilité halfeline",
+                "Brave",
+                "Chanceux",
+                "Résistance des robustes"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "haut-elfe",
+        "fields": {
+            "desc": "En tant que haut-elfe, vous avez l'esprit vif et connaissez les rudiments de la magie. Notez qu'il existe deux sortes de hauts-elfes. Les premiers (les elfes du soleil) sont hautains et solitaires, se pensant supérieurs aux non-elfes et même aux autres elfes. Les seconds (les elfes de la lune), plus communs et plus conviviaux, sont souvent rencontrés chez les humains et les autres races. Les elfes du soleil ont la peau de couleur bronze et les cheveux de couleur cuivre, noir ou or. Leurs yeux sont de couleur or, d'argent ou noir. Les elfes de la lune sont beaucoup plus pâles. Ils ont souvent les cheveux blanc-argenté, noir ou bleu, mais diverses nuances de blond, brun et roux ne ​​sont pas rares. Leurs yeux sont bleus ou verts et mouchetés d'or.",
+            "taille_max": 180,
+            "taille_min": 150,
+            "vitesse": "9.0",
+            "famille": "elfe",
+            "capacite": [
+                "Ascendance féerique",
+                "Entraînement aux armes elfiques",
+                "Langue supplémentaire",
+                "Sens aiguisés",
+                "Sort mineur",
+                "Transe",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "humain",
+        "fields": {
+            "desc": "Dans la plupart des mondes, les humains sont la plus jeune des races communes, la dernière à être apparue et celle dotée de la plus faible longévité par rapport aux nains, aux elfes et aux dragons. Peut-être du fait de leurs vies plus courtes, ils s'efforcent d'atteindre autant d'objectifs qu'ils peuvent pendant les années qui leur sont données. Ou peut-être sentent-ils qu'ils ont quelque chose à prouver aux races plus anciennes, et c'est pourquoi ils construisent de puissants empires basés sur la conquête et le commerce. Mais quelle que soit la raison qui les pousse de l'avant, les humains sont les innovateurs, les bâtisseurs et les pionniers de leurs mondes.",
+            "taille_max": 185,
+            "taille_min": 155,
+            "vitesse": "9.0",
+            "famille": "humain",
+            "capacite": [
+                "aucun"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "nain des collines",
+        "fields": {
+            "desc": "En tant que nain des collines, vous avez les sens aiguisés, une forte intuition et une résistance remarquable. Les nains d'or de Faerûn dans leur puissant royaume du sud sont des nains des collines.",
+            "taille_max": 150,
+            "taille_min": 120,
+            "vitesse": "7.5",
+            "famille": "nain",
+            "capacite": [
+                "Connaissance de la pierre",
+                "Entraînement aux armes naines",
+                "Maîtrise des outils",
+                "Résistance naine",
+                "Ténacité naine",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.race",
+        "pk": "nain des montagnes",
+        "fields": {
+            "desc": "En tant que nain des montagnes, vous êtes fort et robuste, et habitué à une vie difficile en terrain accidenté. Vous êtes probablement plus grand que la moyenne (pour un nain) et votre peau est plus claire. Les nains d'écu au nord de Faerûn sont des nains des montagnes.",
+            "taille_max": 150,
+            "taille_min": 110,
+            "vitesse": "7.5",
+            "famille": "nain",
+            "capacite": [
+                "Connaissance de la pierre",
+                "Entraînement aux armes naines",
+                "Formation au port des armures naines",
+                "Maîtrise des outils",
+                "Résistance naine",
+                "Vision dans le noir"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 2,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "elfe",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 6,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "haut-elfe",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 7,
+        "fields": {
+            "caracteristique": "int",
+            "race": "haut-elfe",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 8,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "elfe des bois",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 9,
+        "fields": {
+            "caracteristique": "sag",
+            "race": "elfe des bois",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 10,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "Elfe noir (drow)",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 11,
+        "fields": {
+            "caracteristique": "cha",
+            "race": "Elfe noir (drow)",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 12,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "Halfelin pied-léger",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 13,
+        "fields": {
+            "caracteristique": "cha",
+            "race": "Halfelin pied-léger",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 14,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "halfelin robuste",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 15,
+        "fields": {
+            "caracteristique": "con",
+            "race": "halfelin robuste",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 16,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 17,
+        "fields": {
+            "caracteristique": "con",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 18,
+        "fields": {
+            "caracteristique": "int",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 19,
+        "fields": {
+            "caracteristique": "sag",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 20,
+        "fields": {
+            "caracteristique": "cha",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 21,
+        "fields": {
+            "caracteristique": "for",
+            "race": "humain",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 22,
+        "fields": {
+            "caracteristique": "con",
+            "race": "nain des collines",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 23,
+        "fields": {
+            "caracteristique": "sag",
+            "race": "nain des collines",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 24,
+        "fields": {
+            "caracteristique": "con",
+            "race": "nain des montagnes",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 25,
+        "fields": {
+            "caracteristique": "for",
+            "race": "nain des montagnes",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 26,
+        "fields": {
+            "caracteristique": "cha",
+            "race": "demi-elfe",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 27,
+        "fields": {
+            "caracteristique": "chx",
+            "race": "demi-elfe",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 28,
+        "fields": {
+            "caracteristique": "for",
+            "race": "demi-orc",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 29,
+        "fields": {
+            "caracteristique": "con",
+            "race": "demi-orc",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 30,
+        "fields": {
+            "caracteristique": "int",
+            "race": "gnome des forêts",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 31,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "gnome des forêts",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 32,
+        "fields": {
+            "caracteristique": "int",
+            "race": "gnome des roches",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 33,
+        "fields": {
+            "caracteristique": "con",
+            "race": "gnome des roches",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 34,
+        "fields": {
+            "caracteristique": "int",
+            "race": "gnome des profondeur",
+            "valeur": 2
+        }
+    },
+    {
+        "model": "charSheet.bonuscaracteristique",
+        "pk": 35,
+        "fields": {
+            "caracteristique": "dex",
+            "race": "gnome des profondeur",
+            "valeur": 1
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "cha",
+        "fields": {
+            "nom": "charisme",
+            "desc": "Le Charisme détermine votre capacité à interagir efficacement avec les autres. Il comprend des facteurs comme la confiance et l'éloquence, et peut représenter une personnalité charmante ou dominante."
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "chx",
+        "fields": {
+            "nom": "choix",
+            "desc": "caractéristique au choix"
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "con",
+        "fields": {
+            "nom": "constitution",
+            "desc": "La Constitution détermine la santé, l'endurance et la force vitale."
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "dex",
+        "fields": {
+            "nom": "dextérité",
+            "desc": "La Dextérité détermine l'agilité, les réflexes et l'équilibre."
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "for",
+        "fields": {
+            "nom": "force",
+            "desc": "La Force détermine la puissance physique, l'entrainement sportif et la mesure dans laquelle vous pouvez exercer une force physique brute."
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "int",
+        "fields": {
+            "nom": "intelligence",
+            "desc": "L'intelligence détermine l'acuité mentale, la précision de la mémoire et la capacité à raisonner."
+        }
+    },
+    {
+        "model": "charSheet.caracteristique",
+        "pk": "sag",
+        "fields": {
+            "nom": "sagesse",
+            "desc": "La Sagesse reflète la façon dont vous êtes à l'écoute du monde autour de vous, ainsi que la perspicacité et l'intuition."
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "acrobaties",
+        "fields": {
+            "desc": "Un jet de Dextérité (Acrobaties) couvre votre tentative pour rester sur vos pieds dans une situation délicate, comme lorsque vous essayez de courir sur de la glace, de tenir en équilibre sur une corde raide, ou de rester debout sur le pont d'un navire chahuté. Le MD peut également demander un jet de Dextérité (Acrobaties) pour voir si vous pouvez effectuer des acrobaties, comme un plongeon, une roulade ou un saut périlleux.",
+            "caracteristique": "dex"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "arcanes",
+        "fields": {
+            "desc": "Un jet d'Intelligence (Arcanes) évalue votre aptitude à vous rappeler des choses à propos de sorts, d'objets magiques, de symboles occultes, de traditions magiques, de plans d'existence ou des habitants de ces plans.",
+            "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "discrétion",
+        "fields": {
+            "desc": "Faite un jet de Dextérité (Discrétion) lorsque vous essayez de vous cacher des ennemis, de vous glisser entre des gardes, filer sans vous faire remarquer, ou vous échapper sans être vu ou entendu.",
+            "caracteristique": "dex"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "dressage",
+        "fields": {
+            "desc": "Quand il est question de savoir si vous pouvez calmer un animal domestique, faire qu'une monture ne s'effraye pas, ou deviner les intentions d'un animal, le MD peut demander un jet de Sagesse (Dressage). Vous pouvez également faire un jet de Sagesse (Dressage) pour contrôler votre monture lorsque vous tentez une manœuvre risquée.",
+            "caracteristique": "sag"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "escamotage",
+        "fields": {
+            "desc": "Chaque fois que vous tentez une manipulation ou une fourberie, comme prendre quelque chose à quelqu'un ou dissimuler un objet sur vous-même, faites un jet de Dextérité (Escamotage). Le MD peut également demander un jet de Dextérité (Escamotage) pour déterminer si vous pouvez dérober une bourse ou glisser quelque chose dans la poche de quelqu'un.",
+            "caracteristique": "dex"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "histoire",
+        "fields": {
+            "desc": "Un jet d'Intelligence (Histoire) évalue votre aptitude à vous rappeler des choses à propos d'événements historiques, de personnages légendaires, d'anciens royaumes, de conflits passés, de guerres récentes et de civilisations perdues.",
+            "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "intimidation",
+        "fields": {
+            "desc": "Lorsque vous essayez d'influencer les gens par des menaces ouvertes, des actions hostiles, ou de la violence physique, le MD peut vous demander de faire un jet de Charisme (Intimidation). Cela peut appliquer pour essayer de soutirer des informations à un prisonnier, convaincre des voyous de renoncer à une confrontation, ou utiliser un tesson de bouteille pour convaincre un vizir sarcastique de réexaminer sa décision.",
+            "caracteristique": "cha"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "intuition",
+        "fields": {
+            "desc": "Un jet de Sagesse (Intuition) détermine si vous pouvez déceler les véritables intentions d'une créature, comme lorsque vous tentez de savoir si elle ment ou pour prévoir son prochain mouvement. Cela implique de lire le langage du corps, détecter ses habitudes de langage et les changements dans ses manières.",
+            "caracteristique": "sag"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "investigation",
+        "fields": {
+            "desc": "Lorsque vous regardez autour de vous pour trouver des indices et faire des déductions sur la base de ces indices, vous faites un jet d'Intelligence (Investigation). Vous pouvez en déduire l'emplacement d'un objet caché, discerner en fonction de l'apparence d'une blessure le type d'arme utilisé, ou déterminer le point faible dans un tunnel pour causer son effondrement. Se pencher sur d'anciens manuscrits à la recherche d'informations cachées peut aussi demander un jet d'Intelligence (Investigation).",
+            "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "médecine",
+        "fields": {
+            "desc": "Un jet de Sagesse (Médecine) permet d'essayer de stabiliser un compagnon mourant ou de diagnostiquer une maladie.",
+            "caracteristique": "sag"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "nature",
+        "fields": {
+            "desc": "Un jet d'Intelligence (Nature) Ã©value votre aptitude Ã  vous rappeler des informations sur un type de terrain, des plantes ou des animaux, la mÃ©tÃ©o et les cycles naturels.",
+            "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "perception",
+        "fields": {
+            "desc": "Un jet de Sagesse (Perception) permet de repérer, entendre ou détecter la présence de quelque chose. Il mesure votre conscience de l'environnement et l'acuité de vos sens. Par exemple, vous pouvez essayer d'entendre une conversation à travers une porte fermée, espionner par une fenêtre ouverte, ou entendre des monstres se faufiler dans la forêt. Vous pouvez aussi essayer de repérer des choses qui sont cachées ou difficiles à déceler, que ce soient des orcs en embuscade sur une route, des voyous cachés dans l'ombre d'une ruelle ou la lueur d'une chandelle sous une porte secrète fermée.",
+            "caracteristique": "sag"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "persuasion",
+        "fields": {
+            "desc": "Lorsque vous essayez d'influencer quelqu'un ou un groupe de personnes avec tact, grâce, ou de bonnes manières, le MD peut vous demander de faire un jet de Charisme (Persuasion). En règle générale, vous utilisez la persuasion lorsque vous agissez de bonne foi, afin de favoriser l'amitié, faire des demandes cordiales, ou utiliser l'étiquette appropriée. Vous pouvez utiliser la persuasion pour convaincre un chambellan de laisser votre groupe voir le roi, négocier la paix entre deux tribus en guerre, ou motiver une foule de citadins",
+            "caracteristique": "cha"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "religion",
+        "fields": {
+            "desc": "Un jet d'Intelligence (Religion) évalue votre aptitude à vous rappeler des choses à propos des dieux, des rites et des prières, la hiérarchie religieuse, les symboles sacrés et les pratiques de cultes secrets.",
+            "caracteristique": "int"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "représentation",
+        "fields": {
+            "desc": "Un jet de Charisme (Représentation) détermine la façon dont vous pouvez enchanter un public par la musique, la danse, le théâtre, le conte ou toute autre forme de divertissement.",
+            "caracteristique": "cha"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "survie",
+        "fields": {
+            "desc": "Le MD peut vous demander de faire un jet de Sagesse (Survie) pour suivre des traces, chasser du gibier sauvage, guider votre groupe sur un terrain gelé, identifier des traces indiquant qu'un ours-hibou vit à proximité, prévoir le temps ou éviter des sables mouvants et autres catastrophes naturelles.",
+            "caracteristique": "sag"
+        }
+    },
+    {
+        "model": "charSheet.competence",
+        "pk": "tromperie",
+        "fields": {
+            "desc": "Un jet de Charisme (Tromperie) détermine si vous pouvez cacher la vérité avec efficacité, soit verbalement, soit par vos actions. La tromperie peut englober beaucoup de choses, depuis l'ambiguïté de ses dires jusqu'au mensonge pur et simple. Des situations typiques sont d'essayer d'embobiner un garde, duper un commerçant, gagner de l'argent au jeu, vous faire passer pour quelqu'un d'autre à l'aide d'un déguisement, apaiser les soupçons de quelqu'un avec une fausse assurance, ou maintenir un visage impassible tout en racontant un mensonge flagrant.",
+            "caracteristique": "cha"
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "barbare",
+        "fields": {
+            "desc": "Drapé de fourrure et portant une hache, un humain tribal de haute taille marche à grandes enjambées à travers le blizzard. Riant aux éclats, il charge le géant du givre qui a osé s'en prendre au troupeau de son clan. Une demi-orc grogne férocement contre le dernier adversaire qui a voulu remettre en cause son autorité sur la tribu, prête à lui briser le cou comme elle l'a fait avec les six précédents. L'écume aux lèvres, un nain balance son casque dans le visage d'un premier ennemi drow puis, se retournant, envoie sa cubitière dans le ventre d'un second.",
+            "dv": 12,
+            "nb_competences": 2,
+            "choix_competences": [
+                "dressage",
+                "intimidation",
+                "nature",
+                "perception",
+                "survie"
+            ],
+            "jets_sauvegarde": [
+                "con"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "barde",
+        "fields": {
+            "desc": "Fredonnant alors qu’elle passe ses doigts sur un ancien monument au cœur de ruines depuis longtemps oubliées, une demi-elfe vêtue de cuir robuste sent le savoir, invoqué par la magie de son chant, bondir dans son esprit. Le savoir de ceux qui ont érigé ce monument. Le savoir relatant la saga mythique qui y est illustrée. Un solide guerrier humain frappe son épée avec rythme sur son armure d’écailles, instaurant un tempo pour accompagner son chant de guerre et exhortant ses compagnons à la bravoure et à l’héroïsme. La magie de son chant les fortifie et les enhardit. Accordant son cistre tout en rigolant, une gnome tisse sa subtile magie sur l’assemblée des nobles, s'assurant ainsi que les paroles de ses compagnons seront bien reçues.",
+            "dv": 8,
+            "nb_competences": 3,
+            "choix_competences": [
+                "acrobaties",
+                "arcanes",
+                "discrétion",
+                "dressage",
+                "escamotage",
+                "histoire",
+                "intimidation",
+                "intuition",
+                "investigation",
+                "médecine",
+                "nature",
+                "perception",
+                "persuasion",
+                "religion",
+                "représentation",
+                "survie",
+                "tromperie"
+            ],
+            "jets_sauvegarde": [
+                "cha",
+                "dex"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "clerc",
+        "fields": {
+            "desc": "Les bras et les yeux levés en direction du soleil, une prière sur les lèvres, un elfe commence à briller d'une lumière intérieure qui s'en va guérir ses compagnons usés par le combat. Chantant une chanson de gloire, un nain fait osciller sa hache en de larges mouvements circulaires afin de couper les rangs orcs face à lui, criant des louanges aux dieux à chaque ennemi qui tombe. Jetant une malédiction sur les morts-vivants qui s'avancent, un humain brandit son symbole sacré alors qu'une lumière se libère de celui-ci pour repousser les zombis qui se pressaient sur ses compagnons.",
+            "dv": 8,
+            "nb_competences": 2,
+            "choix_competences": [
+                "histoire",
+                "intuition",
+                "médecine",
+                "persuasion",
+                "religion"
+            ],
+            "jets_sauvegarde": [
+                "cha",
+                "sag"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "druide",
+        "fields": {
+            "desc": "Tenant bien haut un bâton noueux couronné de houx, une elfe convoque la fureur des tempêtes et en appelle à la puissance foudroyante des éclairs pour punir les porteurs de torches orcs qui menacent sa forêt. Sous forme de léopard, s'accroupissant sur la branche d'un grand arbre à l'abri des regards, un humain scrute à travers la jungle l'étrange construction d'un temple de l'Air du Mal élémentaire, gardant un œil fixé sur les activités des cultistes. Brandissant une épée faîte de feu pur, un demi-elfe charge dans la masse des soldats squelettes, brisant la magie antinaturelle qui a donné à ces immondes créatures un dérisoire semblant de vie.",
+            "dv": 8,
+            "nb_competences": 2,
+            "choix_competences": [
+                "arcanes",
+                "dressage",
+                "intuition",
+                "médecine",
+                "nature",
+                "perception",
+                "religion",
+                "survie"
+            ],
+            "jets_sauvegarde": [
+                "int",
+                "sag"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "ensorceleur",
+        "fields": {
+            "desc": "Avec son regard éclatant d’une lumière dorée, une humaine tend sa main et libère le feu du dragon qui lui brûle les veines. Alors que l’enfer engouffre ses ennemis, une paire d’ailes émerge de son dos, puis elle prend son envol. Sa longue chevelure battue par un vent invoqué, un demi-elfe écarte les bras et lève les yeux au ciel. Le soulevant momentanément du sol, une vague de magie se décharge en lui, à travers lui et par lui, en une puissante explosion foudroyante. Accroupie derrière une stalagmite, une halfeline pointe du doigt un troglodyte qui charge. Une déflagration de feu surgit de son doigt pour atteindre la créature. Elle se replie derrière le rocher avec le sourire, inconsciente du fait que sa magie sauvage a coloré sa peau d’un bleu éclatant.",
+            "dv": 6,
+            "nb_competences": 2,
+            "choix_competences": [
+                "arcanes",
+                "intimidation",
+                "intuition",
+                "persuasion",
+                "religion",
+                "tromperie"
+            ],
+            "jets_sauvegarde": [
+                "cha",
+                "con"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "guerrier",
+        "fields": {
+            "desc": "Un humain équipé d'un harnois clinquant brandit son bouclier devant lui tout en fonçant vers des gobelins massés. Un elfe, derrière lui, vêtu d'une armure de cuir clouté, arrose ces mêmes gobelins avec les flèches qu'il décoche de son précieux arc. Le demi-orc à proximité lance des ordres, aidant les deux combattants à coordonner leur assaut au mieux. Un nain en cotte de mailles interpose son bouclier entre la massue d'un ogre et son compagnon, puis assène un coup mortel de côté. Son compagnon, un demi-elfe en armure d'écailles, fait virevolter deux cimeterres dans un tourbillon aveuglant tout en contournant l'ogre, à la recherche d'un point faible dans sa défense. Un combat de gladiateurs pour le spectacle dans une arène, un maître du trident avec son filet, entraîné à renverser ses ennemis et à se déplacer autour d'eux pour le plaisir et de la foule, et pour son propre avantage tactique.",
+            "dv": 10,
+            "nb_competences": 2,
+            "choix_competences": [
+                "acrobaties",
+                "dressage",
+                "histoire",
+                "intimidation",
+                "intuition",
+                "perception",
+                "survie"
+            ],
+            "jets_sauvegarde": [
+                "con"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "magicien",
+        "fields": {
+            "desc": "Vêtue d'une robe d'argent qui dénote son rang, une elfe ferme les yeux pour s'éloigner des distractions du champ de bataille et commence son chant. Les doigts croisés face à elle, elle achève son sort et lance une petite perle de feu vers les rangs ennemis, laquelle éclate lorsqu'elle arrive à son but et engloutit les soldats lors de son explosion. Vérifiant et revérifiant son travail, un humain dessine à la craie sur le sol de pierre un cercle magique intriguant, puis saupoudre le long de chaque ligne et chaque courbe de la limaille de fer. Une fois le travail accompli, il se lance dans une longue incantation. Un trou s'ouvre alors dans l'espace à l'intérieur du cercle, libérant une bouffée de soufre provenant du plan d'un autre monde. Accroupi au sol à l'intersection de deux couloirs d'un donjon, un gnome jette une poignée de petits os gravés de symboles mystiques, tout en murmurant quelques mots de pouvoir. Il ferme alors ses yeux pour voir les visions plus clairement, hoche la tête lentement, puis ouvre les yeux et pointe le passage à sa gauche.",
+            "dv": 6,
+            "nb_competences": 2,
+            "choix_competences": [
+                "arcanes",
+                "histoire",
+                "intuition",
+                "investigation",
+                "médecine",
+                "religion"
+            ],
+            "jets_sauvegarde": [
+                "int",
+                "sag"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "moine",
+        "fields": {
+            "desc": "Ses paumes floues alors qu'elles dévient une pluie de flèches, une demi-elfe saute par-dessus la barricade et se jette au beau milieu des rangs d'hobgobelins massés de l'autre côté. Elle tournoie parmi eux, les frappant dans les côtes et les envoyant tituber, jusqu'à ce qu'elle se retrouve la dernière debout. Prenant une profonde inspiration, un humain recouvert de tatouages se met en position de combat. Alors que les premiers orcs qui chargent l'atteignent, il souffle, et un déferlement de flammes jaillit de sa bouche, submergeant ses ennemis. Se déplaçant aussi silencieusement que la nuit, une halfeline toute vêtue de noir s'enfonce dans l'ombre d'une arcade et émerge d'une autre nappe d'ombre sur un balcon, à un jet de pierre de distance. Elle glisse sa lame hors de son fourreau enveloppé de tissus et passe par la fenêtre de la chambre du prince tyrannique, tellement vulnérable dans les bras de Morphée.",
+            "dv": 8,
+            "nb_competences": 2,
+            "choix_competences": [
+                "acrobaties",
+                "discrétion",
+                "histoire",
+                "intuition",
+                "religion"
+            ],
+            "jets_sauvegarde": [
+                "dex"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "occultiste",
+        "fields": {
+            "desc": "Un pseudodragon lové sur ses épaules, un jeune elfe vêtu d’une robe dorée sourit chaleureusement, tissant la trame d’un sortilège avec ses paroles mielleuses tout en incitant les sentinelles du palais à se plier à sa volonté. Alors que les flammes surgissent de sa main, une humaine flétrie susurre le nom secret de son patron démoniaque, insufflant à son sort une magie diabolique. Balayant son regard entre un livre vétuste et l’étrange alignement des astres, un tieffelin éperdu psalmodie un rituel mystique qui ouvrira un portail vers un monde distant.",
+            "dv": 8,
+            "nb_competences": 2,
+            "choix_competences": [
+                "arcanes",
+                "histoire",
+                "intimidation",
+                "investigation",
+                "nature",
+                "religion",
+                "tromperie"
+            ],
+            "jets_sauvegarde": [
+                "cha",
+                "sag"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "paladin",
+        "fields": {
+            "desc": "Vêtue d'une armure étincelante sous le soleil, malgré la poussière et la crasse accumulées durant ce long voyage, une humaine pose à terre son épée et son bouclier, puis, sur le corps d'un homme mortellement blessé, elle appose ses mains. Un rayonnement divin s'en échappe, refermant les blessures de l'homme qui ouvre alors les yeux, stupéfait. Accroupis derrière un affleurement rocheux, son manteau noir le rendant quasi invisible dans la nuit, un nain observe une troupe d'orcs fêtant leur dernière victoire. En silence, il s'infiltre dans leur camp et chuchote un serment : deux orcs tombent raide morts avant même d'avoir pu entrevoir sa présence. Sa chevelure couleur argent brillant dans le puits de lumière qui ne semble illuminer que lui, un elfe rit, exultant. Sa lance, comme ses yeux, envoie des éclairs alors qu'il virevolte encore et encore autour d'un géant difforme, jusqu'à ce que sa lumière triomphe de cette hideuse obscurité.",
+            "dv": 10,
+            "nb_competences": 2,
+            "choix_competences": [
+                "intimidation",
+                "intuition",
+                "médecine",
+                "persuasion",
+                "religion"
+            ],
+            "jets_sauvegarde": [
+                "cha",
+                "sag"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "roublard",
+        "fields": {
+            "desc": "Signifiant à ses compagnons d'attendre, un halfelin avance lentement dans la salle du donjon. Il colle son oreille à la porte, puis sort un jeu d'outils et crochète la serrure en un clin d'œil. Il disparaît ensuite dans l'ombre, lorsque son ami guerrier avance pour frapper la porte ouverte. Un humain se cache dans l'ombre d'une ruelle tandis que son complice se prépare pour l'embuscade. Quand leur cible, un esclavagiste notoire, passe en face de la ruelle, le complice crie, l'esclavagiste vient voir ce qui se passe, et la lame de l'assassin lui coupe la gorge avant qu'il ne puisse faire le moindre bruit. Une gnome agite ses doigts et soulève par magie le trousseau de clés à la ceinture du garde. En un instant, les clés sont dans sa main, la porte de la cellule est ouverte, et elle et ses compagnons sont libres de prendre la fuite.",
+            "dv": 8,
+            "nb_competences": 4,
+            "choix_competences": [
+                "acrobaties",
+                "discrétion",
+                "escamotage",
+                "intimidation",
+                "intuition",
+                "investigation",
+                "perception",
+                "persuasion",
+                "représentation",
+                "tromperie"
+            ],
+            "jets_sauvegarde": [
+                "dex",
+                "int"
+            ]
+        }
+    },
+    {
+        "model": "charSheet.classe",
+        "pk": "rôdeur",
+        "fields": {
+            "desc": "D'aspect sauvage et rude, un humain traque seul à travers les ombres des arbres, chassant les orcs qu'il sait préparer l'attaque d'une ferme alentour. Armé d'une épée courte dans chaque main il devient une tornade de métal, tranchant les ennemis les uns après les autres. Après avoir fait une roulade loin d'un souffle d'air gelé, une elfe se redresse d'un bond et dégaine son arc, décochant au passage une flèche vers le dragon blanc. S'affranchissant de la vague de terreur qui émane de lui comme la morsure glacée de son souffle, elle fait pleuvoir ses traits les uns après les autres afin de trouver un point faible entre les épaisses écailles du dragon. Levant sa main en l'air, un demi-elfe siffle vers le faucon qui vole en cercle au-dessus de lui, l'appelant à ses côtés. Chuchotant des instructions en elfique, il pointe du doigt l'ours-hibou qu'il traquait et envoie le rapace distraire la créature pendant qu'il bande son arc.",
+            "dv": 10,
+            "nb_competences": 3,
+            "choix_competences": [
+                "discrétion",
+                "dressage",
+                "intuition",
+                "investigation",
+                "nature",
+                "perception",
+                "survie"
+            ],
+            "jets_sauvegarde": [
+                "dex"
+            ]
+        }
+    }
+]
