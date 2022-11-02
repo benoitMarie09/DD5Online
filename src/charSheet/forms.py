@@ -7,6 +7,20 @@ from .models import PJ, Classe, Competence, Historique
 from django.db.models import Q
 
 
+class CheckboxSelectMultipleWithDisabledOption(forms.CheckboxSelectMultiple):
+    def __init__(self, *args, **kwargs):
+        super(forms.CheckboxSelectMultiple, self).__init__(*args, **kwargs)
+        self.disabled_options = None
+
+    def create_option(self, *args, **kwargs):
+        options_dict = super().create_option(*args, **kwargs)
+
+        if options_dict['value'] in self.disabled_options:
+            options_dict['attrs']['class'] = 'readonly'
+
+        return options_dict
+
+
 class CreateForm(forms.ModelForm):
 
     class Meta:
@@ -37,7 +51,7 @@ class HistoriqueForm(forms.ModelForm):
 
 class CompetencesForm(forms.ModelForm):
     maitrise_competences = forms.ModelMultipleChoiceField(queryset=None,
-                                                          widget=CheckboxSelectMultiple)
+                                                          widget=CheckboxSelectMultipleWithDisabledOption)
 
     class Meta:
         model = PJ
@@ -49,8 +63,16 @@ class CompetencesForm(forms.ModelForm):
         self.historique = self.instance.historique
         self.nb_competences = self.classe.nb_competences + 2
         choix_competence = Competence.objects.filter(
-            classes=self.classe, historiques=self.historique)
+            Q(classes=self.classe) | Q(historiques=self.historique)).distinct()
         self.fields['maitrise_competences'].queryset = choix_competence
+        self.comp_hist = [c.id for c in Competence.objects.filter(
+            historiques=self.historique)]
+        self.comp_selected = [
+            c.id for c in self.instance.maitrise_competences.all()]
+        self.initial = {'maitrise_competences': list(
+            set(self.comp_hist + self.comp_selected))}
+        self.fields['maitrise_competences'].widget.disabled_options = [c.id for c in Competence.objects.filter(
+            historiques=self.historique)]
 
     def clean_maitrise_competences(self):
         values = self.cleaned_data['maitrise_competences']

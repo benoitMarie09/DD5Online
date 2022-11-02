@@ -3,9 +3,10 @@
 {% block body_data %}
 <h2>Choix de la race</h2>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Create">
-</form>
+{% include 'charSheet/details_block.html' %}
+
+{% include 'charSheet/form_block.html' %}
+
+<button onclick="location.href='/{{object.id}}/nom'" type="button">
+    Précédent</button>
 {% endblock body_data%}

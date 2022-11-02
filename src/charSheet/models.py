@@ -5,6 +5,7 @@ from django.forms import CheckboxSelectMultiple
 
 # Create your models here.
 
+
 class Historique(models.Model):
     id = models.CharField(primary_key=True, max_length=50)
     desc = models.TextField(null=True)
@@ -29,9 +30,60 @@ class QuantiteEquipement(models.Model):
 class Equipement(models.Model):
     id = models.CharField(primary_key=True, max_length=50)
     desc = models.TextField(null=True, blank=True)
+    prix = models.FloatField(null=True, blank=True)
+    poids = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return self.id
+
+
+class Arme(Equipement):
+    des_degat = models.ForeignKey('De', on_delete=models.PROTECT)
+    nb_des = models.IntegerField(default=1)
+    degat = models.CharField(null=True, blank=True, max_length=5)
+    type_degat = models.ForeignKey('Type_degat', on_delete=models.PROTECT)
+    propriete = models.ManyToManyField(
+        'ProprieteArme')
+    portee_min = models.FloatField(null=True, blank=True)
+    portee_max = models.FloatField(null=True, blank=True)
+    categorie = models.ForeignKey(
+        'CategorieArme', default='Armes courantes de corps à corps', on_delete=models.PROTECT)
+
+    def save(self, *args, **kwargs):
+        if self.degat is None:
+            self.degat = str(self.nb_des)+'d'+str(self.des_degat)
+
+        super(Arme, self).save(*args, **kwargs)
+
+
+class CategorieArme(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+
+    def __str__(self):
+        return self.id
+
+
+class ProprieteArme(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
+
+class Type_degat(models.Model):
+    id = models.CharField(primary_key=True, max_length=50)
+    desc = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return self.id
+
+
+class De(models.Model):
+    valeur = models.IntegerField(primary_key=True)
+
+    def __str__(self):
+        return str(self.valeur)
 
 
 class Langue(models.Model):
@@ -187,9 +239,7 @@ class PJ(models.Model):
                         race=self.race, caracteristique='cha').valeur
                 except:
                     self.charisme = 10
-        if self.historique:
-            for comp in self.historique.competences.all():
-                self.maitrise_competences.add(comp)
+
         super(PJ, self).save(*args, **kwargs)
 
 # Gestion des formulaire admin pour le m2m
@@ -222,3 +272,9 @@ class RaceAdmin(admin.ModelAdmin):
 
 class CaracteristiqueAdmin(admin.ModelAdmin):
     inlines = (BonusCaracteristique_inline,)
+
+
+class ArmeAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+    }

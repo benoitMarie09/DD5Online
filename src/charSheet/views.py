@@ -17,6 +17,15 @@ class CreatePJView(CreateView):
         return reverse('race', kwargs={'pk': self.object.pk})
 
 
+class UpadateNomView(UpdateView):
+    model = PJ
+    form_class = CreateForm
+    template_name = 'charSheet/pj_form.html'
+
+    def get_success_url(self):
+        return reverse('race', kwargs={'pk': self.object.pk})
+
+
 class UpdateRaceView(UpdateView):
     model = PJ
     form_class = RaceForm

@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
+{% extends 'charSheet/base_form.html' %}
+{% load static %}
 
-<body>
+{% block static_data %}
+<script src="{% static 'charSheet/js/script.js' %}"></script>
+{% endblock %}
 
-    <h2>Submit Button</h2>
+{% block body_data %}
 
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Next">
-    </form>
+<h2>Choix de la race</h2>
 
-</body>
+{% include 'charSheet/details_block.html' %}
 
-</html>
+{% include 'charSheet/form_block.html' %}
+
+<button onclick="location.href='/{{object.id}}/historique'" type="button">
+    Précédent</button>
+
+{% endblock body_data%}

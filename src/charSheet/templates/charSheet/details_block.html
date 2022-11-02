@@ -1,0 +1,31 @@
+<div class="details">
+    <ul>{{object.nom|title}} <a href="/{{object.id}}/nom">modifier</a>
+        {% if object.race %}<li> Race : {{object.race}} <a href="/{{object.id}}/race">modifier</a> </li>{% endif %}
+        {% if object.classe %}<li> Classe : {{object.classe}} <a href="/{{object.id}}/classe">modifier</a></li>{%endif%}
+
+        {% if object.historique %}<li> Historique : {{object.historique}} <a
+                href="/{{object.id}}/historique">modifier</a></li>
+        {% endif %}
+
+        {% if object.competences %}
+        <li>
+            <ul>Compétences :<a href="/{{object.id}}/competences">modifier</a>
+                {% for competence in object.maitrise_competences.all %}
+                <li>{{competence|title</li>
+                {% endfor %}
+            </ul>
+        </li>{{object.competences}} {% endif %}
+        <li>
+            <ul>Caractéristiques : <a href="/{{object.id}}/caract">modifier</a>
+                {% if object.force %}<li> Force : {{object.force}}</li>{% endif %}
+                {% if object.constitution %}<li> Constitution : {{object.constitution}}</li>{% endif %}
+                {% if object.dexterite %}<li> Dextérité : {{object.dexterite}}</li>{% endif %}
+                {% if object.intelligence %}<li> Intelligence : {{object.intelligence}}</li>{% endif %}
+                {% if object.sagesse %}<li> Sagesse : {{object.sagesse}}</li>{% endif %}
+                {% if object.charisme %}<li> Charisme : {{object.charisme}}</li>{% endif %}</ul>
+        </li>
+    </ul>
+
+
+
+</div>

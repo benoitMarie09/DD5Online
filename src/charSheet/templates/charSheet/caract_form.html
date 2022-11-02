@@ -3,9 +3,14 @@
 {% block body_data %}
 <h2>Choix des caractéristiques</h2>
 
+{% include 'charSheet/details_block.html' %}
+
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_ul}}
-    <input type="submit" value="Create">
+    <input type="submit" value="Suivant">
 </form>
+
+<button onclick="location.href='/{{object.id}}/competences'" type="button">
+    Précédent</button>
 {% endblock body_data%}
