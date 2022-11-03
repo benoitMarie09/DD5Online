@@ -68,6 +68,33 @@ class ProprieteArme(models.Model):
         return self.id
 
 
+class Armure(Equipement):
+    MOD_1 = 1
+    MOD_2 = 2
+    MOD_DEXT_CHOICES = (
+        (MOD_1, 'mod.dex'),
+        (MOD_2, 'mod.dex(+2max)'),
+        (None, 'aucun')
+    )
+    LEGERE = 'LGR'
+    INTERMEDIAIRE = 'INT'
+    LOURDE = 'LRD'
+    BOUCLIER = 'BCL'
+    CATEGORIES_CHOICES = (
+        (LEGERE, 'Légère'),
+        (INTERMEDIAIRE, 'Intermédiaire'),
+        (LOURDE, 'Lourde'),
+        (BOUCLIER, 'Bouclier')
+    )
+
+    CA = models.IntegerField(null=True, blank=True)
+    mod_dext = models.IntegerField(
+        null=True, blank=True, choices=MOD_DEXT_CHOICES)
+    discretion_desavantage = models.BooleanField(default=False)
+    force_min = models.IntegerField(null=True, blank=True)
+    categorie = models.CharField(max_length=3, choices=CATEGORIES_CHOICES)
+
+
 class Langue(models.Model):
     id = models.CharField(primary_key=True, max_length=50)
     desc = models.TextField(null=True, blank=True)
