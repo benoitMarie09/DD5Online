@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import PJ, Caracteristique, Classe, Competence, Equipement, EquipementAdmin, Historique, HistoriqueAdmin, Langue, Outil, QuantiteEquipement, Race, RaceCapacite, BonusCaracteristique, RaceAdmin, CaracteristiqueAdmin, QuantiteEquipement
 from .models import *
 from .forms import ClasseAdmin, PJAdmin
 # Register your models here.

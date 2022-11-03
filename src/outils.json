@@ -1,0 +1,72 @@
+[
+    {
+        "model": "charSheet.outil",
+        "pk": "instrument de musique",
+        "fields": {
+            "desc": "(de votre choix)"
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit d'herboriste",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit de contrefaçon",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "kit de déguisement",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "outils de navigateur",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "outils de voleur",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "type de jeu",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "un type d'outil d'artisan",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "véhicules (aquatiques)",
+        "fields": {
+            "desc": ""
+        }
+    },
+    {
+        "model": "charSheet.outil",
+        "pk": "véhicules (terrestre)",
+        "fields": {
+            "desc": ""
+        }
+    }
+]

@@ -44,9 +44,9 @@ class Arme(Equipement):
     TRANCHANT = 'TRC'
 
     DEGAT_TYPE_CHOICES = (
-        (CONTONDANT, 'contondant'),
-        (PERFORANT, 'perforant'),
-        (TRANCHANT, 'tranchant'),
+        (CONTONDANT, 'Contondant'),
+        (PERFORANT, 'Cerforant'),
+        (TRANCHANT, 'Tranchant'),
         (None, '(Aucun)')
     )
 
@@ -76,9 +76,21 @@ class Langue(models.Model):
         return self.id
 
 
-class Outil(models.Model):
-    id = models.CharField(primary_key=True, max_length=50)
-    desc = models.TextField(null=True, blank=True)
+class Outil(Equipement):
+    INSTRUMENT = 'INS'
+    JEU = 'JEU'
+    KIT = 'KIT'
+    OUTIL = 'OUT'
+    VEHICULE = 'VEH'
+
+    TYPE_CHOICES = (
+        (INSTRUMENT, 'Instrument de musique'),
+        (JEU, 'jeu'),
+        (KIT, 'kit'),
+        (OUTIL, "outils d'artisan"),
+        (VEHICULE, 'vehicule')
+    )
+    type = models.CharField(default=OUTIL, max_length=3, choices=TYPE_CHOICES)
 
     def __str__(self):
         return self.id
