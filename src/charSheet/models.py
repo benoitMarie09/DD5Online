@@ -38,29 +38,26 @@ class Equipement(models.Model):
 
 
 class Arme(Equipement):
-    des_degat = models.ForeignKey('De', on_delete=models.PROTECT)
-    nb_des = models.IntegerField(default=1)
-    degat = models.CharField(null=True, blank=True, max_length=5)
-    type_degat = models.ForeignKey('Type_degat', on_delete=models.PROTECT)
+
+    CONTONDANT = 'CTD'
+    PERFORANT = 'PRF'
+    TRANCHANT = 'TRC'
+
+    DEGAT_TYPE_CHOICES = (
+        (CONTONDANT, 'contondant'),
+        (PERFORANT, 'perforant'),
+        (TRANCHANT, 'tranchant'),
+        (None, '(Aucun)')
+    )
+
+    degat = models.CharField(
+        blank=True, max_length=5)
+    type_degat = models.CharField(
+        blank=True, max_length=3, choices=DEGAT_TYPE_CHOICES)
     propriete = models.ManyToManyField(
         'ProprieteArme')
     portee_min = models.FloatField(null=True, blank=True)
     portee_max = models.FloatField(null=True, blank=True)
-    categorie = models.ForeignKey(
-        'CategorieArme', default='Armes courantes de corps à corps', on_delete=models.PROTECT)
-
-    def save(self, *args, **kwargs):
-        if self.degat is None:
-            self.degat = str(self.nb_des)+'d'+str(self.des_degat)
-
-        super(Arme, self).save(*args, **kwargs)
-
-
-class CategorieArme(models.Model):
-    id = models.CharField(primary_key=True, max_length=50)
-
-    def __str__(self):
-        return self.id
 
 
 class ProprieteArme(models.Model):
@@ -69,21 +66,6 @@ class ProprieteArme(models.Model):
 
     def __str__(self):
         return self.id
-
-
-class Type_degat(models.Model):
-    id = models.CharField(primary_key=True, max_length=50)
-    desc = models.TextField(null=True, blank=True)
-
-    def __str__(self):
-        return self.id
-
-
-class De(models.Model):
-    valeur = models.IntegerField(primary_key=True)
-
-    def __str__(self):
-        return str(self.valeur)
 
 
 class Langue(models.Model):
@@ -133,6 +115,9 @@ class BonusCaracteristique(models.Model):
     race = models.ForeignKey(
         'Race', related_name='bonus_caract', on_delete=models.SET_NULL, null=True)
     valeur = models.IntegerField(default=1)
+
+    def __str__(self):
+        return '{}:{}+{}'.format(self.race, self.caracteristique, self.valeur)
 
 
 class ValeurCaracteristique(models.Model):
