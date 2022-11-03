@@ -11,7 +11,7 @@ class Historique(models.Model):
     desc = models.TextField(null=True)
     competences = models.ManyToManyField(
         'Competence', related_name='historiques')
-    outils = models.ManyToManyField('Outil')
+    # outils = models.ManyToManyField('Outil', on_delete = )
     langue = models.ManyToManyField('Langue')
     po = models.IntegerField(null=True, blank=True)
 
@@ -50,10 +50,10 @@ class Arme(Equipement):
         (None, '(Aucun)')
     )
 
-    degat = models.CharField(
-        blank=True, max_length=5)
-    type_degat = models.CharField(
-        blank=True, max_length=3, choices=DEGAT_TYPE_CHOICES)
+    degat = models.CharField(null=True,
+                             blank=True, max_length=5)
+    type_degat = models.CharField(null=True,
+                                  blank=True, max_length=3, choices=DEGAT_TYPE_CHOICES)
     propriete = models.ManyToManyField(
         'ProprieteArme')
     portee_min = models.FloatField(null=True, blank=True)
