@@ -1,0 +1,119 @@
+$size: max(50vh, 50vw);
+$smallSize: 20vh;
+$color: rgba(0, 0, 0, 0.836);
+
+@mixin face-setup($angle, $size: $size, $color: $color) {
+  transform: rotateY($angle) translateZ($size);
+  background-color: $color;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+  margin: 0;
+  perspective: 500vh;
+}
+
+#root {
+  transform-style: preserve-3d;
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    background-color: transparent;
+    z-index: 1000;
+  }
+
+  #scene {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+
+  .cube {
+    position: absolute;
+    width: calc(2 * $size);
+    height: calc(2 * $size);
+    top: calc(-1 * $size);
+    left: calc(-1 * $size);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    color: rgb(29, 138, 7);
+
+    & > * {
+      box-shadow: 0 0 15px rgb(29, 138, 7) inset, 0 0 10px rgb(29, 138, 7);
+    }
+
+    &__front,
+    &__back,
+    &__left,
+    &__right {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__front {
+      @include face-setup(0deg);
+    }
+    &__right {
+      @include face-setup(90deg);
+    }
+    &__back {
+      @include face-setup(180deg);
+    }
+    &__left {
+      @include face-setup(270deg);
+    }
+
+    &__top {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-50%) rotateX(90deg);
+      background-color: $color;
+    }
+    &__bottom {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translateY(50%) rotateX(270deg);
+      background-color: $color;
+    }
+  }
+}
+.zoomOut {
+  $size: 20vh;
+  perspective: 500vh;
+  perspective-origin: 50% 0%;
+  #root {
+    .layout {
+      & .cube {
+        color: rgb(29, 138, 7);
+        transition: 0.5s ease-out;
+        width: 2 * $size;
+        height: 2 * $size;
+        top: -$size;
+        left: -$size;
+        &__front {
+          @include face-setup(0deg, $size);
+        }
+        &__right {
+          @include face-setup(90deg, $size);
+        }
+        &__back {
+          @include face-setup(180deg, $size);
+        }
+        &__left {
+          @include face-setup(270deg, $size);
+        }
+      }
+    }
+  }
+}
